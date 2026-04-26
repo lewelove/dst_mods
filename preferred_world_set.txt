@@ -1,0 +1,30 @@
+World Settings:
+  Global:
+    All Seasons -> Long
+    Spawn Mode -> Random
+  Survivors:
+    Extra Starting Resources -> Never
+    Seasonal Starting Items -> Never
+    Griefer Spawn Protection -> None
+  World:
+    Hunts _> Little
+    Meteor Frequency -> Never
+    Wildfires -> Never
+
+World Generation:
+  World:
+    Roads -> None
+    Touch Stones -> None
+    Starting Resource Variety -> Classic
+  Resources:
+    Berry Bushes -> Little
+    Cacti -> Less
+    Carrots -> Less
+    Flint -> Little
+    Flowers, Evil Flowers -> Little
+    Grass -> More
+    Meteor Fields -> None
+    Mushrooms -> Little
+    Saplings -> More
+    Trees -> Lots
+
