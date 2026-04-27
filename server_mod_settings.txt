@@ -1,0 +1,38 @@
+Cave Guardian
+
+Force Biome
+  Pig Village -> On
+  Spider Quarry -> On
+  Killer Bees -> On
+  Flower Patch and Rocks -> On
+  Triple MacTusk -> On
+  Frog Ponds -> Off
+  Frogs and Bugs -> Off
+  Extra Deciduous -> On
+  Rocky -> On
+  Quad Moose Eggs -> Off
+  Swampy Sinkhole -> On
+  Cave Swamp -> On
+  Underground Forest -> On
+  Grassland Sinkhole -> On
+  Mixed Mushroom Forest -> On
+  Mixed Mushroom Meadow -> On
+  Bat Enclosure -> On
+  More Altars -> On
+  Cave Jungle -> On
+  Scared Danger -> On
+  Military Pits -> On
+  Muddy Sacred -> On
+
+Imperishable Thermal Stone
+
+Infinite Tent
+
+Large Chest
+  Recipe difficulty -> Hard
+
+Moving Box
+
+Pick/Axe Rebalanced
+
+Starve!

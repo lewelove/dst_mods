@@ -1,4 +1,4 @@
-World Settings:
+Forest World Settings:
   Global:
     All Seasons -> Long
     Spawn Mode -> Random
@@ -7,14 +7,19 @@ World Settings:
     Seasonal Starting Items -> Never
     Griefer Spawn Protection -> None
   World:
-    Hunts _> Little
-    Meteor Frequency -> Never
-    Wildfires -> Never
+    Forest Petrification -> None
+    Hunts -> Little
+    Meteor Frequency -> None
+    Wildfires -> None
+  Creatures:
+    Grass Gekko Morphing -> None
+    Marotters -> None
 
-World Generation:
+Forest World Generation:
   World:
     Roads -> None
     Touch Stones -> None
+    Failed Survivors -> None
     Starting Resource Variety -> Classic
   Resources:
     Berry Bushes -> Little
@@ -27,4 +32,19 @@ World Generation:
     Mushrooms -> Little
     Saplings -> More
     Trees -> Lots
+  Hostile Creatures and Spawners:
+    Tentacles -> More
 
+Caves World Generation:
+  World:
+    Touch Stones -> None
+    Failed Survivors -> None
+    Starting Resource Variety -> Classic
+  Resources:
+    Berry Bushes -> Little
+    Mushrooms -> Little
+    Trees -> More
+  Hostile Creatures and Spawners:
+    Tentacles -> More
+  
+  
