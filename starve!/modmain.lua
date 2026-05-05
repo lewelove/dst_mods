@@ -65,7 +65,7 @@ ChangeStats("seeds_cooked", 2.35, 0, 1)
 ChangeStats("butterflywings", 4.7, 0, 3)
 
 ChangeStats("butterflymuffin", 12.5, 5, 20)
-ChangeStats("dragonpie", 18.75, 5, 30)
+ChangeStats("dragonpie", 18.75, 5, 40)
 ChangeStats("fishtacos", 18.75, 15, 25)
 ChangeStats("meatballs", 47.5, 5, 3)
 ChangeStats("bonestew", 112.5, 5, 12)
@@ -73,6 +73,17 @@ ChangeStats("pumpkincookie", 18.75, 33, 0)
 ChangeStats("asparagussoup", 18.75, 5, 30)
 ChangeStats("potatotornado", 18.75, 15, 3)
 ChangeStats("vegstinger", 18.75, 33, 3)
+
+local cooking = GLOBAL.require("cooking")
+local recipes = cooking.recipes.cookpot
+
+if recipes.dragonpie then
+    recipes.dragonpie.test = function(cooker, names, tags)
+        return (names.dragonfruit or names.dragonfruit_cooked) 
+               and not tags.meat 
+               and not tags.inedible
+    end
+end
 
 local function FundamentalWinterFreeze(inst)
     if not GLOBAL.TheWorld.ismastersim then return end

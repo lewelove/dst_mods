@@ -1,6 +1,18 @@
 Cave Guardian
 
-Force Biome
+Damage Indicators Together
+
+DJPaul's Sort Inventory
+  Press to sort -> H
+  Preferred torch count -> 1
+  Store these is backpack -> Tools
+  Fun Mode? -> No
+
+Enduring Backpack Skins
+
+Epic Healthbar
+
+Force Biomes
   Pig Village -> On
   Spider Quarry -> On
   Killer Bees -> On
@@ -24,15 +36,21 @@ Force Biome
   Military Pits -> On
   Muddy Sacred -> On
 
+Global Pause
+  Use hotkey -> Yes
+  Autopause for singleplayer -> No
+
 Imperishable Thermal Stone
 
 Infinite Tent
 
-Large Chest
+Large Chest (HD)
   Recipe difficulty -> Hard
 
-Moving Box
-
 Pick/Axe Rebalanced
+
+Place Anything Closer
+
+Rot Rots
 
 Starve!
