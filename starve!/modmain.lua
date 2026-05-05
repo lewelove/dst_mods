@@ -32,10 +32,8 @@ local function ChangeStats(prefab, hu, s, h)
     end
 end
 
-
-ChangeStats("asparagus", 12.5, 0, 3)
 ChangeStats("asparagus_cooked", 12.5, 0, 8)
-ChangeStats("acorn_cooked", 4.675, 0, 1)
+ChangeStats("acorn_cooked", 2.375, 0, 1)
 ChangeStats("butterflywings", 4.675, 0, 3)
 ChangeStats("cactus_meat", 9.375, -10, -10)
 ChangeStats("cactus_meat_cooked", 12.5, 10, 0)
@@ -65,15 +63,18 @@ ChangeStats("cookedmonstermeat", 18.75, -10, -10)
 ChangeStats("seeds", 2.375, 0, 0)
 ChangeStats("seeds_cooked", 2.375, 0, 1)
 
+ChangeStats("asparagussoup", 18.75, 5, 30)
 ChangeStats("butterflymuffin", 12.5, 5, 20)
 ChangeStats("dragonpie", 18.75, 5, 40)
+ChangeStats("potatotornado", 18.75, 15, 3)
+ChangeStats("pumpkincookie", 18.75, 33, 0)
+ChangeStats("salsa", 18.75, 33, 3)
+ChangeStats("vegstinger", 18.75, 33, 3)
+ChangeStats("trailmix", 12.5, 5, 20)
+
 ChangeStats("fishtacos", 18.75, 15, 20)
 ChangeStats("meatballs", 47.5, 5, 3)
 ChangeStats("bonestew", 112.5, 5, 12)
-ChangeStats("pumpkincookie", 18.75, 33, 0)
-ChangeStats("asparagussoup", 18.75, 5, 30)
-ChangeStats("potatotornado", 18.75, 15, 3)
-ChangeStats("vegstinger", 18.75, 33, 3)
 
 local cooking = GLOBAL.require("cooking")
 local recipes = cooking.recipes.cookpot

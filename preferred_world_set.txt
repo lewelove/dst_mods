@@ -29,7 +29,7 @@ Forest World Generation:
     Cacti -> Less
     Carrots -> Less
     Flint -> Little
-    Flowers, Evil Flowers -> Little
+    Flowers, Evil Flowers -> More
     Grass -> More
     Meteor Fields -> None
     Ponds -> Less

@@ -1,0 +1,43 @@
+Tab 1
+  Torch
+  Axe
+  Pickaxe
+  Shovel
+  Spear
+  Football Helmet
+  Log Suit
+  Hammer
+  Campfire
+
+Tab 2
+  Rope
+  Boards
+  Cut Stone
+  Electrical Doodad
+  Pitchfork
+  Garden Hoe
+  Lantern
+  Trap
+  Backpack
+
+Tab 3
+  Science Machine
+  Alchemy Engine
+  Fire Pit
+  Chest
+  Chest
+  Crock Pot
+  Ice Box
+
+Tab 5
+  Torch
+  Luxury Axe
+  Opulent Pickaxe
+  Regal Shovel
+  Dark Sword
+  Pick/Axe
+  Walking Cane
+  Lantern
+  Campfire
+
+  
