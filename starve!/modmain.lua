@@ -1,6 +1,13 @@
 local GLOBAL = GLOBAL
 local require = GLOBAL.require
 
+GLOBAL.TUNING.AFFINITY_15_CALORIES_TINY = 1.0
+GLOBAL.TUNING.AFFINITY_15_CALORIES_SMALL = 1.0
+GLOBAL.TUNING.AFFINITY_15_CALORIES_MED = 1.0
+GLOBAL.TUNING.AFFINITY_15_CALORIES_LARGE = 1.0
+GLOBAL.TUNING.AFFINITY_15_CALORIES_HUGE = 1.0
+GLOBAL.TUNING.AFFINITY_15_CALORIES_SUPERHUGE = 1.0
+
 local PLANT_DEFS = require("prefabs/farm_plant_defs").PLANT_DEFS
 
 local SPICES = { "_spice_garlic", "_spice_sugar", "_spice_chili", "_spice_salt" }
@@ -25,6 +32,7 @@ local function ChangeStats(prefab, hu, s, h)
     end
 end
 
+
 ChangeStats("asparagus", 12.5, 0, 3)
 ChangeStats("asparagus_cooked", 12.5, 0, 8)
 ChangeStats("cactus_meat", 9.375, -10, -10)
@@ -36,6 +44,14 @@ ChangeStats("durian_cooked", 18.75, -20, 0)
 ChangeStats("eggplant", 12.5, 0, 3)
 ChangeStats("eggplant_cooked", 18.75, 0, 8)
 ChangeStats("berries_juicy_cooked", 12.5, 0, 8)
+ChangeStats("moon_cap", 0, 10, 0)
+ChangeStats("moon_cap_cooked", 0, -10, 0)
+ChangeStats("blue_cap", 0, -15, 20)
+ChangeStats("blue_cap_cooked", 0, 10, -3)
+ChangeStats("green_cap", 0, -50, 0)
+ChangeStats("green_cap_cooked", 0, 15, -1)
+ChangeStats("red_cap", 0, 0, -20)
+ChangeStats("red_cap_cooked", 0, -10, 1)
 ChangeStats("potato", 9.375, -5, -3)
 ChangeStats("potato_cooked", 18.75, 0, 3)
 ChangeStats("pumpkin", 18.75, 0, 3)
@@ -154,6 +170,6 @@ end
 local function DisableWildGrowth(inst)
     if inst.components.pickable then GLOBAL.MakeNoGrowInWinter(inst) end
 end
+
 AddPrefabPostInit("cactus", DisableWildGrowth)
 AddPrefabPostInit("oasis_cactus", DisableWildGrowth)
-
