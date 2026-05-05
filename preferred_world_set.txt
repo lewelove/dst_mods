@@ -10,10 +10,11 @@ Forest World Settings:
     Forest Petrification -> None
     Hunts -> Little
     Meteor Frequency -> None
-    Wildfires -> None
   Creatures:
     Grass Gekko Morphing -> None
     Marotters -> None
+  Giants:
+    Spider Queen -> Little
 
 Forest World Generation:
   World:
@@ -21,6 +22,8 @@ Forest World Generation:
     Touch Stones -> None
     Failed Survivors -> None
     Starting Resource Variety -> Classic
+    JIMBO -> None
+    Stage Plays -> None
   Resources:
     Berry Bushes -> Little
     Cacti -> Less
@@ -29,10 +32,13 @@ Forest World Generation:
     Flowers, Evil Flowers -> Little
     Grass -> More
     Meteor Fields -> None
+    Ponds -> Less
     Mushrooms -> Little
     Saplings -> More
     Trees -> Lots
+    Tumbleweeds -> Less
   Hostile Creatures and Spawners:
+    Spider Dens -> More
     Tentacles -> More
 
 Caves World Generation:
@@ -42,9 +48,10 @@ Caves World Generation:
     Starting Resource Variety -> Classic
   Resources:
     Berry Bushes -> Little
-    Mushrooms -> Little
     Trees -> More
   Hostile Creatures and Spawners:
+    Spider Dens -> More
+    Spilagmites -> More
     Tentacles -> More
   
   

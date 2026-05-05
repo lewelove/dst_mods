@@ -1,0 +1,13 @@
+Settings
+  Sound FX Volume -> 5
+  Music Volume -> 0
+  Ambient Volume -> 5
+  Auto-Pause -> Disabled
+  Crafting Pin Pages -> 5
+
+Advanced
+  Lag Compensation -> None
+
+Controls
+  Map -> Tab
+  Scoreboard -> None

@@ -1,5 +1,7 @@
 Cave Guardian
 
+Common Sense
+
 Damage Indicators Together
 
 DJPaul's Sort Inventory
@@ -11,6 +13,9 @@ DJPaul's Sort Inventory
 Enduring Backpack Skins
 
 Epic Healthbar
+  Global Damage Numbers -> Enabled
+  Mob Health -> Enabled
+  Display Health For -> All
 
 Force Biomes
   Pig Village -> On
@@ -30,6 +35,7 @@ Force Biomes
   Mixed Mushroom Forest -> On
   Mixed Mushroom Meadow -> On
   Bat Enclosure -> On
+  Spider Land -> On
   More Altars -> On
   Cave Jungle -> On
   Scared Danger -> On

@@ -1,0 +1,31 @@
+Action Queue RB2
+  Selection opacity -> 30%
+
+Advanced Controls
+
+Auto-Unequip on 1%
+
+Boss Indicators
+
+Combined Status
+
+Craft Pot
+
+Geometric Placement
+
+Gesture Wheel
+
+[Gorge] Victorian HUD
+
+Minecraft Item Pickup Sound
+
+Mini Sign Deployer
+
+Nightmare Phase Indicator
+  Visibility -> Have Medallion
+
+Pickup Filter
+  Filter Item -> F9
+  Toggle Pickup Filter -> F2
+  Allow Mouse Pickups -> Enabled
+  Red Tint -> Disabled
