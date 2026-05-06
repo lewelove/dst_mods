@@ -32,6 +32,7 @@ local function ChangeStats(prefab, hu, s, h)
     end
 end
 
+ChangeStats("asparagus", 12.5, 0, 3)
 ChangeStats("asparagus_cooked", 12.5, 0, 8)
 ChangeStats("acorn_cooked", 2.375, 0, 1)
 ChangeStats("butterflywings", 4.675, 0, 3)
