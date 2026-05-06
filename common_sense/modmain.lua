@@ -34,8 +34,8 @@ AddRecipe2(
     "trap",
     {
         Ingredient("cutgrass", 3),
-        Ingredient("twigs", 1)
-        Ingredient("rope", 1),
+        Ingredient("twigs", 1),
+        Ingredient("rope", 1)
     },
     TECH.SCIENCE_ONE,
     {
