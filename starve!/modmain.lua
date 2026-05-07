@@ -110,18 +110,20 @@ local ICE_ALLOW_LIST = {
 local function ApplyCrockPotRestrictions()
     for pot_type, recipe_table in pairs(cooking.recipes) do
         for name, recipe in pairs(recipe_table) do
-            local old_test = recipe.test
-            recipe.test = function(cooker, names, tags)
-                if MONSTER_MEAT_BAN_LIST[name] and (tags.monster or 0) > 0 then
+            if name ~= "wetgoop" then
+                local old_test = recipe.test
+                recipe.test = function(cooker, names, tags)
+                    if MONSTER_MEAT_BAN_LIST[name] and (tags.monster or 0) > 0 then
+                        return false
+                    end
+                    if not ICE_ALLOW_LIST[name] and (names.ice or 0) > 1 then
+                        return false
+                    end
+                    if old_test then
+                        return old_test(cooker, names, tags)
+                    end
                     return false
                 end
-                if not ICE_ALLOW_LIST[name] and (names.ice or 0) > 1 then
-                    return false
-                end
-                if old_test then
-                    return old_test(cooker, names, tags)
-                end
-                return false
             end
         end
     end
@@ -145,14 +147,14 @@ if recipes then
             return (tags.monster or 0) >= 1 and not tags.inedible
         end
     end
-end
 
-if recipes and recipes.shroombait then
-    recipes.shroombait.priority = 100
+    if recipes.shroombait then
+        recipes.shroombait.priority = 100
+    end
 end
 
 if portable_recipes and portable_recipes.monstertartare then
-  portable_recipes.monstertartare.priority = 100
+    portable_recipes.monstertartare.priority = 100
 end
 
 ApplyCrockPotRestrictions()
