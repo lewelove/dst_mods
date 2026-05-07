@@ -89,7 +89,7 @@ local MONSTER_MEAT_BAN_LIST = {
     kabobs = true,
     meatballs = true,
     bonestew = true,
-    pierogi = true,
+    perogies = true,
     hotchili = true,
     pepperpopper = true,
     surfnturf = true,
@@ -127,8 +127,6 @@ local function ApplyCrockPotRestrictions()
     end
 end
 
-ApplyCrockPotRestrictions()
-
 local recipes = cooking.recipes.cookpot
 local portable_recipes = cooking.recipes.portablecookpot
 
@@ -149,9 +147,15 @@ if recipes then
     end
 end
 
-if portable_recipes and portable_recipes.monstertartare then
-    portable_recipes.monstertartare.priority = 100
+if recipes and recipes.shroombait then
+    recipes.shroombait.priority = 100
 end
+
+if portable_recipes and portable_recipes.monstertartare then
+  portable_recipes.monstertartare.priority = 100
+end
+
+ApplyCrockPotRestrictions()
 
 local function FundamentalWinterFreeze(inst)
     if not GLOBAL.TheWorld.ismastersim then return end
