@@ -110,7 +110,7 @@ local ICE_ALLOW_LIST = {
 local function ApplyCrockPotRestrictions()
     for pot_type, recipe_table in pairs(cooking.recipes) do
         for name, recipe in pairs(recipe_table) do
-            if name ~= "wetgoop" then
+            if name ~= "wetgoop" and name ~= "monsterlasagna" then
                 local old_test = recipe.test
                 recipe.test = function(cooker, names, tags)
                     if MONSTER_MEAT_BAN_LIST[name] and (tags.monster or 0) > 0 then
@@ -132,6 +132,15 @@ end
 local recipes = cooking.recipes.cookpot
 local portable_recipes = cooking.recipes.portablecookpot
 
+local function OverrideLasagna(recipe_table)
+    if recipe_table and recipe_table.monsterlasagna then
+        recipe_table.monsterlasagna.priority = 99
+        recipe_table.monsterlasagna.test = function(cooker, names, tags)
+            return (tags.monster or 0) >= 1
+        end
+    end
+end
+
 if recipes then
     if recipes.dragonpie then
         recipes.dragonpie.test = function(cooker, names, tags)
@@ -140,21 +149,17 @@ if recipes then
                    and not tags.inedible
         end
     end
-
-    if recipes.monsterlasagna then
-        recipes.monsterlasagna.priority = 99
-        recipes.monsterlasagna.test = function(cooker, names, tags)
-            return (tags.monster or 0) >= 1 and not tags.inedible
-        end
-    end
-
     if recipes.shroombait then
         recipes.shroombait.priority = 100
     end
+    OverrideLasagna(recipes)
 end
 
-if portable_recipes and portable_recipes.monstertartare then
-    portable_recipes.monstertartare.priority = 100
+if portable_recipes then
+    if portable_recipes.monstertartare then
+        portable_recipes.monstertartare.priority = 100
+    end
+    OverrideLasagna(portable_recipes)
 end
 
 ApplyCrockPotRestrictions()
