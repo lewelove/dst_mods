@@ -331,7 +331,7 @@ local ICE_ALLOW_LIST = {
     lobsterbisque = true,
     mandrakesoup = true,
     bonestew = true,
-    melonsicle = true,
+    watermelonicle = true,
     salsa = true,
     seafoodgumbo = true,
     sweettea = true,
@@ -387,13 +387,6 @@ local function OverrideLasagna(recipe_table)
 end
 
 if recipes then
-    if recipes.dragonpie then
-        recipes.dragonpie.test = function(cooker, names, tags)
-            return (names.dragonfruit or names.dragonfruit_cooked) 
-                   and not tags.meat 
-                   and not tags.inedible
-        end
-    end
     if recipes.shroombait then
         recipes.shroombait.priority = 100
     end
