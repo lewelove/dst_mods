@@ -1264,7 +1264,7 @@ local desc_table
 local function cn(key,param1,param2,param3,param4,param5)
 
   -- SPAGHETTI DIFF BEGIN
-  local allowed = {food=1, perish=1, dmg=1, uses_of=1, heal=1}
+  local allowed = {food=1, dmg=1, uses_of=1, heal=1}
   if not allowed[key] then return end 
   -- SPAGHETTI DIFF END
 
