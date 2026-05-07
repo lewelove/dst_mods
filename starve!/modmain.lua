@@ -238,10 +238,6 @@ ChangeStats("bananajuice", 25, 33, 20)
 -- 37.5, 5, 20 -> nerf -> reason: allowing ice
 ChangeStats("bunnystew", 12.5, 5, 20)
 
--- Butter Muffin
--- 37.5, 5, 20 -> nerf -> reason: OP + butterfly wings are nerfed
-ChangeStats("butterflymuffin", 12.5, 5, 20)
-
 -- Ceviche
 -- 25, 5, 20 -> buff -> reason: unused
 ChangeStats("ceviche", 37.5, 5, 40)
@@ -318,6 +314,8 @@ local MONSTER_MEAT_BAN_LIST = {
     bonestew = true,
     seafoodgumbo = true,
     asparagugazpacho = true,
+    -- ban of dishes with allowed twigs, for the same reason
+    powcake = true,
 }
 
 local ICE_ALLOW_LIST = {
@@ -340,6 +338,17 @@ local ICE_ALLOW_LIST = {
     vegstinger = true,
 }
 
+local TWIGS_ALLOW_LIST = {
+    bananapop = true,
+    potatotornado = true,
+    figkabab = true,
+    fishsticks = true,
+    kabobs = true,
+    watermelonicle = true,
+    powcake = true,
+    beefalofeed = true,
+}
+
 local function ApplyCrockPotRestrictions()
     for pot_type, recipe_table in pairs(cooking.recipes) do
         for name, recipe in pairs(recipe_table) do
@@ -350,6 +359,9 @@ local function ApplyCrockPotRestrictions()
                         return false
                     end
                     if not ICE_ALLOW_LIST[name] and (names.ice or 0) > 0 then
+                        return false
+                    end
+                    if not TWIGS_ALLOW_LIST[name] and (tags.inedible or 0) > 0 then
                         return false
                     end
                     if old_test then
