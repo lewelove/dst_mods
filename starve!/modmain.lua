@@ -32,6 +32,12 @@ local function ChangeStats(prefab, hu, s, h)
     end
 end
 
+local function DisableEating(inst)
+    if inst.components.edible then
+        inst:RemoveComponent("edible")
+    end
+end
+
 
 ---- Veggies ----
 
@@ -65,6 +71,11 @@ ChangeStats("eggplant_cooked", 18.75, 0, 8)
 
 -- Mandrake
 -- 75, 0, 60 -> made inedible
+AddPrefabPostInit("mandrake", DisableEating)
+
+-- Cooked Mandrake
+-- 150, 0, 100 -> made inedible
+AddPrefabPostInit("mandrake_cooked", DisableEating)
 
 -- Potato
 -- 12.5, -5, -3 -> nerf
@@ -290,32 +301,10 @@ ChangeStats("vegstinger", 18.75, 33, 3)
 
 local cooking = GLOBAL.require("cooking")
 
-local MONSTER_MEAT_BAN_LIST = {
-    baconeggs = true,
-    figkabab = true,
-    fishsticks = true,
-    fishtacos = true,
-    honeyham = true,
-    honeynuggets = true,
-    kabobs = true,
-    meatballs = true,
-    bonestew = true,
-    perogies = true,
-    hotchili = true,
-    pepperpopper = true,
-    surfnturf = true,
-    turkeydinner = true,
-    -- ban of dishes with allowed ice, so they don't steal the priority
-    bunnystew = true,
-    ceviche = true,
-    guacamole = true,
-    lobsterbisque = true,
-    mandrakesoup = true,
-    bonestew = true,
-    seafoodgumbo = true,
-    asparagugazpacho = true,
-    -- ban of dishes with allowed twigs, for the same reason
-    powcake = true,
+local MONSTER_MEAT_ALLOW_LIST = {
+    monsterlasagna = true,
+    monstertartare = true,
+    shroombait = true,
 }
 
 local ICE_ALLOW_LIST = {
@@ -355,7 +344,7 @@ local function ApplyCrockPotRestrictions()
             if name ~= "wetgoop" then
                 local old_test = recipe.test
                 recipe.test = function(cooker, names, tags)
-                    if MONSTER_MEAT_BAN_LIST[name] and (tags.monster or 0) > 0 then
+                    if not MONSTER_MEAT_ALLOW_LIST[name] and (tags.monster or 0) > 0 then
                         return false
                     end
                     if not ICE_ALLOW_LIST[name] and (names.ice or 0) > 0 then
