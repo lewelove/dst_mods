@@ -94,6 +94,10 @@ local MONSTER_MEAT_BAN_LIST = {
     pepperpopper = true,
     surfnturf = true,
     turkeydinner = true,
+    -- ICE_ALLOW ban so they don't steal the priority
+    ceviche = true,
+    lobsterbisque = true,
+    asparagugazpacho = true,
 }
 
 local ICE_ALLOW_LIST = {
@@ -110,13 +114,13 @@ local ICE_ALLOW_LIST = {
 local function ApplyCrockPotRestrictions()
     for pot_type, recipe_table in pairs(cooking.recipes) do
         for name, recipe in pairs(recipe_table) do
-            if name ~= "wetgoop" and name ~= "monsterlasagna" then
+            if name ~= "wetgoop" then
                 local old_test = recipe.test
                 recipe.test = function(cooker, names, tags)
                     if MONSTER_MEAT_BAN_LIST[name] and (tags.monster or 0) > 0 then
                         return false
                     end
-                    if not ICE_ALLOW_LIST[name] and (names.ice or 0) > 1 then
+                    if not ICE_ALLOW_LIST[name] and (names.ice or 0) > 0 then
                         return false
                     end
                     if old_test then
