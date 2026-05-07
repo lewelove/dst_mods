@@ -78,14 +78,79 @@ ChangeStats("meatballs", 47.5, 5, 3)
 ChangeStats("bonestew", 112.5, 5, 12)
 
 local cooking = GLOBAL.require("cooking")
-local recipes = cooking.recipes.cookpot
 
-if recipes.dragonpie then
-    recipes.dragonpie.test = function(cooker, names, tags)
-        return (names.dragonfruit or names.dragonfruit_cooked) 
-               and not tags.meat 
-               and not tags.inedible
+local MONSTER_MEAT_BAN_LIST = {
+    baconeggs = true,
+    figkabab = true,
+    fishsticks = true,
+    fishtacos = true,
+    honeyham = true,
+    honeynuggets = true,
+    kabobs = true,
+    meatballs = true,
+    bonestew = true,
+    pierogi = true,
+    hotchili = true,
+    pepperpopper = true,
+    surfnturf = true,
+    turkeydinner = true,
+}
+
+local ICE_ALLOW_LIST = {
+    bananapop = true,
+    bunnystew = true,
+    ceviche = true,
+    frozenbananadaiquiri = true,
+    icecream = true,
+    lobsterbisque = true,
+    melonsicle = true,
+    asparagugazpacho = true,
+}
+
+local function ApplyCrockPotRestrictions()
+    for pot_type, recipe_table in pairs(cooking.recipes) do
+        for name, recipe in pairs(recipe_table) do
+            local old_test = recipe.test
+            recipe.test = function(cooker, names, tags)
+                if MONSTER_MEAT_BAN_LIST[name] and (tags.monster or 0) > 0 then
+                    return false
+                end
+                if not ICE_ALLOW_LIST[name] and (names.ice or 0) > 1 then
+                    return false
+                end
+                if old_test then
+                    return old_test(cooker, names, tags)
+                end
+                return false
+            end
+        end
     end
+end
+
+ApplyCrockPotRestrictions()
+
+local recipes = cooking.recipes.cookpot
+local portable_recipes = cooking.recipes.portablecookpot
+
+if recipes then
+    if recipes.dragonpie then
+        recipes.dragonpie.test = function(cooker, names, tags)
+            return (names.dragonfruit or names.dragonfruit_cooked) 
+                   and not tags.meat 
+                   and not tags.inedible
+        end
+    end
+
+    if recipes.monsterlasagna then
+        recipes.monsterlasagna.priority = 99
+        recipes.monsterlasagna.test = function(cooker, names, tags)
+            return (tags.monster or 0) >= 1 and not tags.inedible
+        end
+    end
+end
+
+if portable_recipes and portable_recipes.monstertartare then
+    portable_recipes.monstertartare.priority = 100
 end
 
 local function FundamentalWinterFreeze(inst)
