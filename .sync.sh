@@ -4,3 +4,5 @@ rsync -av --delete '/home/lewelove/dev/dst_mods/common_sense/' '/home/lewelove/.
 
 rsync -av --delete '/home/lewelove/dev/dst_mods/show_me_minimal/' '/home/lewelove/.local/share/Steam/steamapps/common/Don'\''t Starve Together/mods/show_me_minimal/'
 
+rsync -av --delete '/home/lewelove/dev/dst_mods/place_closer/' '/home/lewelove/.local/share/Steam/steamapps/common/Don'\''t Starve Together/mods/place_closer/'
+
