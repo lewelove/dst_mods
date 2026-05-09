@@ -391,6 +391,88 @@ end
 
 ApplyCrockPotRestrictions()
 
+---- Bees Loot Changes ----
+
+local function ModifyBeeLoot(inst)
+    if not GLOBAL.TheWorld.ismastersim then return end
+    if inst.components.lootdropper then
+        -- Clear existing loot tables (removes honey and default stinger chances)
+        inst.components.lootdropper:SetChanceLootTable(nil)
+        inst.components.lootdropper:SetLoot({})
+        inst.components.lootdropper.chanceloots = {}
+        -- Add 25% Stinger drop
+        inst.components.lootdropper:AddChanceLoot("stinger", 0.05)
+    end
+end
+
+AddPrefabPostInit("bee", ModifyBeeLoot)
+AddPrefabPostInit("killerbee", ModifyBeeLoot)
+
+
+---- Deciduous Tree Loot Changes ----
+
+AddPrefabPostInit("deciduoustree", function(inst)
+    if not GLOBAL.TheWorld.ismastersim then return end
+    local ld = inst.components.lootdropper
+    if not ld then return end
+
+    -- Prevent "acorn" from being added to the loot table
+    local old_SetLoot = ld.SetLoot
+    ld.SetLoot = function(self, loot, ...)
+        if loot then
+            local new_loot = {}
+            for _, v in ipairs(loot) do
+                if v ~= "acorn" then table.insert(new_loot, v) end
+            end
+            return old_SetLoot(self, new_loot, ...)
+        end
+        return old_SetLoot(self, loot, ...)
+    end
+    
+    -- Manually scrub if already set (for trees already at Stage 3)
+    if ld.loot then
+        for i = #ld.loot, 1, -1 do
+            if ld.loot[i] == "acorn" then table.remove(ld.loot, i) end
+        end
+    end
+
+    -- Block hardcoded manual spawns from prefabs/deciduoustrees.lua
+    local old_Spawn = ld.SpawnLootPrefab
+    ld.SpawnLootPrefab = function(self, prefab, pt, ...)
+        if prefab == "acorn" then return end
+        return old_Spawn(self, prefab, pt, ...)
+    end
+
+    -- Hook into DropLoot to handle custom seasonal logic
+    local old_Drop = ld.DropLoot
+    ld.DropLoot = function(self, pt, ...)
+        local ret = old_Drop(self, pt, ...)
+        
+        -- Custom logic for Stage 3 (Tall)
+        if inst.components.growable and inst.components.growable.stage == 3 then
+            local season = GLOBAL.TheWorld.state.season
+            local pos = pt or inst:GetPosition()
+
+            if season == "autumn" then
+                -- 1 guaranteed + 25% chance for 1 more
+                old_Spawn(self, "acorn", pos)
+                if GLOBAL.math.random() < 0.25 then
+                    old_Spawn(self, "acorn", pos)
+                end
+            elseif season == "spring" then
+                -- 25% chance for 1
+                if GLOBAL.math.random() < 0.25 then
+                    old_Spawn(self, "acorn", pos)
+                end
+            end
+        end
+        return ret
+    end
+end)
+
+
+---- Crops Freeze in Winter ----
+
 local function FundamentalWinterFreeze(inst)
     if not GLOBAL.TheWorld.ismastersim then return end
 
@@ -483,6 +565,9 @@ local weeds = { "weed_tillweed", "weed_firenettle", "weed_forgetmelots", "weed_i
 for _, weed_name in ipairs(weeds) do
     AddPrefabPostInit(weed_name, FundamentalWinterFreeze)
 end
+
+
+---- Cactuses Freeze in Winter ----
 
 local function DisableWildGrowth(inst)
     if inst.components.pickable then GLOBAL.MakeNoGrowInWinter(inst) end
