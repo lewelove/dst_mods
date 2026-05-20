@@ -1,7 +1,4 @@
 Forest World Settings:
-  Global:
-    All Seasons -> Long
-    Spawn Mode -> Random
   Survivors:
     Extra Starting Resources -> Never
     Seasonal Starting Items -> Never
@@ -10,14 +7,24 @@ Forest World Settings:
     Forest Petrification -> None
     Hunts -> Little
     Meteor Frequency -> None
+  Resource Regrowth:
+    Regrowth Multiplier -> None
   Creatures:
+    Butterflies -> Little
     Grass Gekko Morphing -> None
-    Marotters -> None
+    Moles -> None
+    Rabbits -> Little
+  Hostile Creatures:
+    Hounds -> More
+    Killer Bees -> More
+    Spiders -> More
   Giants:
-    Spider Queen -> Little
+    Treeguards -> More
+    Spider Queen -> None
 
 Forest World Generation:
   World:
+    World Size -> Huge
     Roads -> None
     Touch Stones -> None
     Failed Survivors -> None
@@ -26,30 +33,44 @@ Forest World Generation:
     Stage Plays -> None
   Resources:
     Berry Bushes -> Little
-    Cacti -> Less
-    Carrots -> Less
+    Boulders -> Little
+    Cacti -> Little
+    Carrots -> Little
     Flint -> Little
-    Flowers, Evil Flowers -> More
-    Grass -> More
+    Flowers, Evil Flowers -> Lots
     Meteor Fields -> None
-    Ponds -> Less
     Mushrooms -> Little
-    Saplings -> More
-    Trees -> Lots
-    Tumbleweeds -> Less
+    Tumbleweeds -> Little
+  Creatures and Spawners:
+    Mole Burrows -> None
   Hostile Creatures and Spawners:
     Spider Dens -> More
     Tentacles -> More
 
 Caves World Generation:
+  Hostile Creatures:
+    Bats -> More
+    Cave Spiders -> More
+    Dangling Depth Spiders -> More
+    Spiders -> More
+    Spitter Spiders -> More
+  Giants:
+    Treeguards -> More
+
+Caves World Generation:
   World:
+    World Size -> Huge
     Touch Stones -> None
     Failed Survivors -> None
     Starting Resource Variety -> Classic
   Resources:
     Berry Bushes -> Little
-    Trees -> More
+    Boulders -> More
+    Grass -> Less
+    Mushroom Trees -> Little
+    Saplings -> Less
   Hostile Creatures and Spawners:
+    Clockworks -> More
     Spider Dens -> More
     Spilagmites -> More
     Tentacles -> More
