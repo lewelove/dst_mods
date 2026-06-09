@@ -234,8 +234,8 @@ ChangeStats("garlic_seeds", 2.375, 0, 0)
 ---- Dishes ----
 
 -- Asparagus Soup
--- 18.75, 5, 20 -> buff -> reason: unsed
-ChangeStats("asparagussoup", 18.75, 5, 30)
+-- 18.75, 5, 20 -> no changes
+ChangeStats("asparagussoup", 18.75, 5, 20)
 
 -- Banana Pop
 -- 12.5, 33, 20 -> nerf -> reason: allowing ice
@@ -336,6 +336,7 @@ local TWIGS_ALLOW_LIST = {
     watermelonicle = true,
     powcake = true,
     beefalofeed = true,
+    monsterlasagna = true,
 }
 
 local function ApplyCrockPotRestrictions()
