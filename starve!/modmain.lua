@@ -38,124 +38,33 @@ local function DisableEating(inst)
     end
 end
 
-
----- Veggies ----
-
--- Cooked Asparagus
--- 25, 0, 3 -> rebalance
-ChangeStats("asparagus_cooked", 12.5, 0, 8)
-
--- Cactus Flesh
--- 12.5, -5, -3 -> nerf
-ChangeStats("cactus_meat", 9.375, -10, -10)
-
--- Cooked Cactus Flesh
--- 12.5, 15, 1 -> nerf
-ChangeStats("cactus_meat_cooked", 12.5, 10, 1)
-
--- Corn
--- 25, 0, 3 -> nerf
-ChangeStats("corn", 12.5, 0, 3)
-
--- Popcorn
--- 12.5, 0, 3 -> nerf
-ChangeStats("corn_cooked", 9.375, 0, 1)
-
--- Eggplant
--- 25, 0, 8 -> nerf
-ChangeStats("eggplant", 12.5, 0, 3)
-
--- Braised Eggplant
--- 25, 0, 20 -> nerf
-ChangeStats("eggplant_cooked", 18.75, 0, 8)
-
--- Mandrake
--- 75, 0, 60 -> made inedible
-AddPrefabPostInit("mandrake", DisableEating)
-
--- Potato
--- 12.5, -5, -3 -> nerf
-ChangeStats("potato", 4.675, -5, -3)
-
--- Roasted Potato
--- 25, 0, 20 -> nerf
-ChangeStats("potato_cooked", 12.5, 0, 3)
-
--- Pumpkin
--- 37.5, 0, 3 -> nerf
-ChangeStats("pumpkin", 12.5, 0, 3)
-
--- Hot Pumpkin
--- 37.5, 0, 8 -> nerf
-ChangeStats("pumpkin_cooked", 18.75, 0, 8)
-
--- Roasted Toma Root
--- 12.5, 0, 20 -> nerf
-ChangeStats("tomato_cooked", 12.5, 0, 8)
-
--- Moon Shroom
--- 12.5, 10, 0 -> rebalance
-ChangeStats("moon_cap", 0, 20, 0)
-
--- Cooked Moon Shroom
--- -12.5, -10, 0 -> rebalance
-ChangeStats("moon_cap_cooked", 0, -20, 0)
-
--- Blue Cap
--- 12.5, -15, 20 -> nerf
-ChangeStats("blue_cap", 0, -15, 20)
-
--- Cooked Blue Cap
--- 12.5, 10, -3 -> nerf
-ChangeStats("blue_cap_cooked", 0, 10, -3)
-
--- Green Cap
--- 12.5, -50, 0 -> nerf
-ChangeStats("green_cap", 0, -50, 0)
-
--- Cooked Green Cap
--- 0, 15, -1 -> nerf
-ChangeStats("green_cap_cooked", 0, 15, -3)
-
--- Red Cap
--- 12.5, 0, -20 -> nerf
-ChangeStats("red_cap", 0, 0, -20)
-
--- Cooked Red Cap
--- 0, -10, 1 -> buff
-ChangeStats("red_cap_cooked", 0, -10, 8)
-
-
-
----- Fruits ----
-
--- Durian
--- 25, -5, -3 -> nerf
-ChangeStats("durian", 12.5, -20, -20)
-
--- Extra Smelly Durian
--- 25, -5, 0 -> nerf
-ChangeStats("durian_cooked", 18.75, -20, 0)
-
--- Dragon Fruit 
--- 9.375, 0, 3 -> no changes
-ChangeStats("dragonfruit", 9.375, 0, 3)
-
--- Prepared Dragon Fruit 
--- 12.5, 0, 20 -> nerf
-ChangeStats("dragonfruit", 12.5, 0, 8)
-
--- Sliced Pomegranate
--- 12.5, 0, 20 -> nerf
-ChangeStats("pomegranate_cooked", 12.5, 0, 8)
-
--- Roasted Juicy Berries
--- 18.75, 0, 3 -> rebalance
-ChangeStats("berries_juicy_cooked", 12.5, 0, 8)
-
-
+-- The order of ingredients is based on [this list](https://dontstarve.wiki.gg/wiki/Food_Value/DST#Vegetable_Value)
 
 ---- Meats ----
+
+-- Morsel
+-- 12.5, -10, 0 -> nerf
+-- ChangeStats("smallmeat", 9.375, -10, 0)
+
+-- Small Jerky
+-- 12.5, 10, 8 -> nerf
+-- ChangeStats("smallmeat_dried", 12.5, 10, 8)
+
+-- Drumstick
+-- 12.5, -10, 0 -> nerf
+-- ChangeStats("drumstick", 9.375, -10, 0)
+
+-- Frog Legs
+-- 12.5, -10, 0 -> nerf
+-- ChangeStats("froglegs", 9.375, -10, 0)
+
+-- Meat
+-- 25, -10, 1 -> nerf
+-- ChangeStats("meat", 18.75, -10, 1)
+
+-- Jerky
+-- 25, 15, 20 -> nerf
+-- ChangeStats("meat_dried", 18.75, 15, 20)
 
 -- Monster Meat
 -- 18.75, -15, -20 -> nerf
@@ -169,31 +78,194 @@ ChangeStats("cookedmonstermeat", 18.75, -10, -10)
 -- 18.75, -5, -3 -> nerf
 -- ChangeStats("monstermeat_dried", 12.5, -5, -3)
 
--- Meat
--- 25, -10, 1 -> nerf
--- ChangeStats("meat", 18.75, -10, 1)
+---- Fruits ----
 
--- Jerky
--- 25, 15, 20 -> nerf
--- ChangeStats("meat_dried", 18.75, 15, 20)
+-- Berries
+-- 9.375, 0, 0
+ChangeStats("berries", 6.25, 0, 0)
 
--- Drumstick
--- 12.5, -10, 0 -> nerf
--- ChangeStats("drumstick", 9.375, -10, 0)
+-- Roasted Berries
+-- 12.5, 0, 1
+ChangeStats("berries_cooked", 9.375, 0, 1)
 
--- Frog Legs
--- 12.5, -10, 0 -> nerf
--- ChangeStats("froglegs", 9.375, -10, 0)
+-- Juicy Berries
+-- 12.5, 0, 1
+ChangeStats("berries_juicy", 6.25, 0, 1)
 
--- Morsel
--- 12.5, -10, 0 -> nerf
--- ChangeStats("smallmeat", 9.375, -10, 0)
+-- Roasted Juicy Berries
+-- 18.75, 0, 3
+ChangeStats("berries_juicy_cooked", 9.375, 0, 3)
 
--- Small Jerky
--- 12.5, 10, 8 -> nerf
--- ChangeStats("smallmeat_dried", 12.5, 10, 8)
+-- Sliced Pomegranate
+-- 12.5, 0, 20
+ChangeStats("pomegranate_cooked", 12.5, 0, 8)
 
+-- Durian
+-- 25, -5, -3 -> nerf
+ChangeStats("durian", 12.5, -20, -20)
 
+-- Extra Smelly Durian
+-- 25, -5, 0 -> nerf
+ChangeStats("durian_cooked", 18.75, -20, 0)
+
+-- Dragon Fruit 
+-- 9.375, 0, 3
+ChangeStats("dragonfruit", 9.375, 0, 1)
+
+-- Prepared Dragon Fruit 
+-- 12.5, 0, 20
+ChangeStats("dragonfruit_cooked", 12.5, 0, 3)
+
+---- Veggies ----
+
+-- Carrot
+-- 12.5, 0, 1
+ChangeStats("carrot", 6.25, 0, 0)
+
+-- Roasted Carrot
+-- 12.5, 0, 3
+ChangeStats("carrot_cooked", 9.375, 0, 1)
+
+-- Corn
+-- 25, 0, 3 -> nerf
+ChangeStats("corn", 3.125, -5, 0)
+
+-- Popcorn
+-- 12.5, 0, 3 -> nerf
+ChangeStats("corn_cooked", 3.125, 0, 0)
+
+-- Eggplant
+-- 25, 0, 8 -> nerf
+ChangeStats("eggplant", 3.125, -5, 0)
+
+-- Braised Eggplant
+-- 25, 0, 20 -> nerf
+ChangeStats("eggplant_cooked", 9.375, 0, 1)
+
+-- Pumpkin
+-- 37.5, 0, 3 -> nerf
+ChangeStats("pumpkin", 3.125, -5, 0)
+
+-- Hot Pumpkin
+-- 37.5, 0, 8 -> nerf
+ChangeStats("pumpkin_cooked", 9.375, 0, 1)
+
+-- Mandrake
+-- 75, 0, 60 -> made inedible
+AddPrefabPostInit("mandrake", DisableEating)
+
+-- Lichen
+-- 12.5, -5, 3
+ChangeStats("cutlichen", 3.125, -15, 1)
+-- todo: Make Inedible Value of 1
+
+-- Cactus Flesh
+-- 12.5, -5, -3 -> nerf
+ChangeStats("cactus_meat", 3.125, -10, -10)
+
+-- Cooked Cactus Flesh
+-- 12.5, 15, 1 -> nerf
+ChangeStats("cactus_meat_cooked", 9.375, 0, 1)
+
+-- Asparagus
+-- 12.5, 0, 3 -> nerf
+ChangeStats("asparagus", 6.25, 0, 0)
+
+-- Cooked Asparagus
+-- 25, 0, 3 -> nerf
+ChangeStats("asparagus_cooked", 9.375, 0, 1)
+
+-- Ripe Stone Fruit
+-- 12.5, 0, 1
+ChangeStats("rock_avocado_fruit_ripe", 6.25, 0, 0)
+
+-- Cooked Stone Fruit
+-- 12.5, 0, 3
+ChangeStats("rock_avocado_fruit_ripe_cooked", 9.375, 0, 1)
+
+-- Garlic
+-- 9.375, -10, 0
+ChangeStats("garlic", 3.125, -10, 0)
+
+-- Roasted Garlic
+-- 9.375, -5, 1
+ChangeStats("garlic_cooked", 6.25, -5, 1)
+
+-- Onion
+-- 9.375, -10, 0
+ChangeStats("onion", 3.125, -10, 1)
+
+-- Roasted Onion
+-- 9.375, -5, 1
+ChangeStats("onion_cooked", 6.25, -5, 1)
+
+-- Pepper
+-- 9.375, -15, -20
+ChangeStats("pepper", 6.25, -15, -20)
+
+-- Roasted Pepper
+-- 9.375, -10, -3
+ChangeStats("pepper_cooked", 9.375, -10, -3)
+
+-- Potato
+-- 12.5, -5, -3
+ChangeStats("potato", 3.125, -5, 0)
+
+-- Roasted Potato
+-- 25, 0, 20
+ChangeStats("potato_cooked", 9.375, 0, 1)
+
+-- Toma Root
+-- 12.5, 0, 20
+ChangeStats("tomato", 9.375, 0, 0)
+
+-- Roasted Toma Root
+-- 12.5, 0, 20
+ChangeStats("tomato_cooked", 9.375, 0, 1)
+
+-- Red Cap
+-- 12.5, 0, -20
+ChangeStats("red_cap", 0, 0, -20)
+
+-- Cooked Red Cap
+-- 0, -10, 1
+ChangeStats("red_cap_cooked", 0, -10, 8)
+
+-- Green Cap
+-- 12.5, -50, 0
+ChangeStats("green_cap", 0, -50, 0)
+
+-- Cooked Green Cap
+-- 0, 15, -1
+ChangeStats("green_cap_cooked", 0, 15, -3)
+
+-- Blue Cap
+-- 12.5, -15, 20
+ChangeStats("blue_cap", 0, -15, 20)
+
+-- Cooked Blue Cap
+-- 12.5, 10, -3
+ChangeStats("blue_cap_cooked", 0, 10, -3)
+
+-- Moon Shroom
+-- 12.5, 10, 0
+ChangeStats("moon_cap", 0, 20, 0)
+
+-- Cooked Moon Shroom
+-- -12.5, -10, 0
+ChangeStats("moon_cap_cooked", 0, -20, 0)
+
+-- Kelp Fronds
+-- 9.375, -10, -1
+
+-- Cooked Kelp Fronds
+-- 9.375, -5, 0
+
+-- Dried Kelp Fronds
+-- 9.375, 10, 1
+
+-- Cactus Flower
+-- 12.5, 5, 8
 
 ---- Other ----
 
