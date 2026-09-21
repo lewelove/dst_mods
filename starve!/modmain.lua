@@ -44,11 +44,7 @@ end
 
 -- Morsel
 -- 12.5, -10, 0
--- ChangeStats("smallmeat", 9.375, -10, 0)
-
--- Small Jerky
--- 12.5, 10, 8
-ChangeStats("smallmeat_dried", 12.5, 10, 1)
+ChangeStats("smallmeat", 12.5, -10, 0)
 
 -- Drumstick
 -- 12.5, -10, 0
@@ -58,13 +54,37 @@ ChangeStats("smallmeat_dried", 12.5, 10, 1)
 -- 12.5, -10, 0
 -- ChangeStats("froglegs", 12.5, -10, 0)
 
+-- Small Jerky
+-- 12.5, 10, 8
+ChangeStats("smallmeat_dried", 12.5, 10, 1)
+
+-- Naked Nostrils
+-- 12.5, -10, 3
+ChangeStats("batnose", 12.5, -10, 0)
+
+-- Charred Nostrils
+-- 18.75, 0, 8
+ChangeStats("batnose_cooked", 18.75, 0, 1)
+
+-- Batilisk Wing
+-- 12.5, -10, 3
+ChangeStats("batwing", 12.5, -10, 0)
+
+-- Cooked Batilisk Wing
+-- 18.75, 0, 8
+ChangeStats("batwing_cooked", 18.75, 0, 1)
+
 -- Meat
 -- 25, -10, 1
 -- ChangeStats("meat", 25, -10, 1)
 
+-- Cooked Meat
+-- 25, 0, 3
+ChangeStats("cookedmeat", 25, 0, 1)
+
 -- Jerky
 -- 25, 15, 20
-ChangeStats("meat_dried", 25, 15, 3)
+ChangeStats("meat_dried", 25, 15, 1)
 
 -- Monster Meat
 -- 18.75, -15, -20
@@ -72,19 +92,35 @@ ChangeStats("monstermeat", 18.75, -20, -20)
 
 -- Cooked Monster Meat
 -- 18.75, -10, -3
--- ChangeStats("cookedmonstermeat", 18.75, -10, -10)
+ChangeStats("cookedmonstermeat", 18.75, -10, -10)
 
 -- Monster Jerky
 -- 18.75, -5, -3
--- ChangeStats("monstermeat_dried", 12.5, -5, -3)
+ChangeStats("monstermeat_dried", 18.75, -5, -5)
+
+--- Fish ---
+
+-- Small Fishy Jerky
+-- 12.5, 20, 15
+ChangeStats("fishmeat_small_dried", 12.5, 20, 1)
 
 -- Fish Steak
 -- 25, 0, 8
-ChangeStats("fishmeat_cooked", 25, 0, 3)
+ChangeStats("fishmeat_cooked", 25, 0, 1)
 
 -- Fish Jerky
 -- 25, 15, 20
-ChangeStats("fishmeat_dried", 25, 15, 3)
+ChangeStats("fishmeat_dried", 25, 20, 1)
+
+-- Eel
+-- 9.375, 0, 3
+ChangeStats("eel", 9.375, 0, 1)
+
+-- Cooked Eel
+-- 12.5, 0, 8
+ChangeStats("eel_cooked", 12.5, 0, 1)
+
+--- Other Meat ---
 
 -- Summer Koalefant Trunk
 -- 37.5, 0, 30
@@ -96,15 +132,15 @@ ChangeStats("trunk_winter", 25, -10, 1)
 
 -- Cooked Koalefant Trunk
 -- 75, 0, 40
-ChangeStats("trunk_cooked", 25, 0, 8)
+ChangeStats("trunk_cooked", 37.5, 0, 8)
 
 -- Heat Gland
 -- 18.75, -10, 8
-ChangeStats("mitegland", 12.5, -10, 3)
+ChangeStats("mitegland", 12.5, -10, 1)
 
 -- Cooked Heat Gland
 -- 25, -5, 20
-ChangeStats("mitegland_cooked", 18.75, -5, 8)
+ChangeStats("mitegland_cooked", 18.75, -5, 1)
 
 ---- Fruits ----
 
@@ -122,7 +158,7 @@ ChangeStats("berries_juicy", 6.25, 0, 1)
 
 -- Roasted Juicy Berries
 -- 18.75, 0, 3
-ChangeStats("berries_juicy_cooked", 9.375, 0, 3)
+ChangeStats("berries_juicy_cooked", 9.375, 0, 1)
 
 -- Fig
 -- 12.5, 0, 0
@@ -134,7 +170,7 @@ ChangeStats("fig_cooked", 9.375, 0, 1)
 
 -- Lesser Glow Berry
 -- 12.5, -10, 3
-ChangeStats("wormlight_lesser", 6.25, -10, 3)
+ChangeStats("wormlight_lesser", 6.25, -10, 1)
 
 -- Pomegranate
 -- 9.375, 0, 3
@@ -150,11 +186,11 @@ ChangeStats("durian", 6.25, -20, -20)
 
 -- Extra Smelly Durian
 -- 25, -5, 0
-ChangeStats("durian_cooked", 9.375, -20, 1)
+ChangeStats("durian_cooked", 9.375, -50, 1)
 
 -- Dragon Fruit 
 -- 9.375, 0, 3
-ChangeStats("dragonfruit", 6.25, 0, 1)
+ChangeStats("dragonfruit", 6.25, 0, 0)
 
 -- Prepared Dragon Fruit 
 -- 12.5, 0, 20
@@ -170,11 +206,11 @@ ChangeStats("cave_banana_cooked", 9.375, 0, 1)
 
 -- Watermelon
 -- 12.5, 5, 3
-ChangeStats("watermelon", 6.25, 5, 1)
+ChangeStats("watermelon", 6.25, 0, 0)
 
 -- Grilled Watermelon
 -- 12.5, 7.5, 1
-ChangeStats("watermelon_cooked", 9.375, 10, 3)
+ChangeStats("watermelon_cooked", 9.375, 0, 1)
 
 -- Glow Berry
 -- 25, -10, 11
@@ -301,11 +337,11 @@ ChangeStats("rock_avocado_fruit_ripe_cooked", 9.375, 0, 3)
 
 -- Garlic
 -- 9.375, -10, 0
-ChangeStats("garlic", 3.125, -10, 0)
+ChangeStats("garlic", 3.125, -10, 3)
 
 -- Roasted Garlic
 -- 9.375, -5, 1
-ChangeStats("garlic_cooked", 6.25, -5, 1)
+ChangeStats("garlic_cooked", 6.25, -5, 3)
 
 -- Onion
 -- 9.375, -10, 0
