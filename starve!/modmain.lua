@@ -429,21 +429,47 @@ ChangeStats("garlic_seeds", 2.375, 0, 0)
 
 ---- Dishes ---- https://dontstarve.wiki.gg/wiki/Dishes ----
 
--- Asparagus Soup
--- 18.75, 5, 20
-ChangeStats("asparagussoup", 18.75, 5, 20)
+-- [Asparagus Soup](https://dontstarve.wiki.gg/wiki/Asparagus_Soup/DST)
+-- 18.75, 5, 20 -> 18.75, 5, 10
+ChangeStats("asparagussoup", 18.75, 5, 10)
 
--- Banana Pop
--- 12.5, 33, 20 -> nerf -> reason: allowing ice
+-- [Bacon and Eggs](https://dontstarve.wiki.gg/wiki/Bacon_and_Eggs/DST)
+-- 75, 5, 20 -> 75, 5, 10
+ChangeStats("baconeggs", 75, 5, 10)
+
+-- [Banana Pop](https://dontstarve.wiki.gg/wiki/Banana_Pop/DST)
+-- Allow ice and twigs
+-- 12.5, 33, 20 -> 12.5, 33, 3
 ChangeStats("bananapop", 12.5, 33, 3)
 
--- Banana Shake
--- 25, 33, 8 -> buff -> reason: unused
-ChangeStats("bananajuice", 25, 15, 40)
+-- [Banana Shake](https://dontstarve.wiki.gg/wiki/Banana_Shake)
+-- 2 Bananas, 1 Sweetener, 1 Ice
+-- 25, 33, 8 -> 25, 33, 40
+ChangeStats("bananajuice", 25, 33, 40)
 
--- Bunny Stew
--- 37.5, 5, 20 -> nerf -> reason: allowing ice
-ChangeStats("bunnystew", 12.5, 5, 20)
+-- [Barnacle Linguine](https://dontstarve.wiki.gg/wiki/Barnacle_Linguine)
+-- 75, 20, 30 -> 50, 5, 20
+ChangeStats("barnaclinguine", 50, 5, 20)
+
+-- [Barnacle Nigiri](https://dontstarve.wiki.gg/wiki/Barnacle_Nigiri)
+-- 37.5, 15, 40 -> 37.5, 15, 20
+ChangeStats("barnaclesushi", 37.5, 15, 20)
+
+-- [Barnacle Pita](https://dontstarve.wiki.gg/wiki/Barnacle_Pita)
+-- 37.5, 5, 20 -> 37.5, 5, 3
+ChangeStats("barnaclepita", 37.5, 5, 3)
+
+-- [Beefy Greens](https://dontstarve.wiki.gg/wiki/Beefy_Greens)
+-- 75, 5, 40 -> 37.5, 5, 40
+ChangeStats("meatysalad", 37.5, 5, 40)
+
+-- [Breakfast Skillet](https://dontstarve.wiki.gg/wiki/Breakfast_Skillet)
+-- 37.5, 5, 20 -> 37.5, 5, 10
+ChangeStats("veggieomlet", 37.5, 5, 10)
+
+-- [Bunny Stew](https://dontstarve.wiki.gg/wiki/Bunny_Stew)
+-- 37.5, 5, 20 -> 12.5, 5, 10
+ChangeStats("bunnystew", 12.5, 5, 10)
 -- (meat < 1) and (frozen >=2) -> buff -> reason: fallback for meat+ice dishes
 for _, recipe_table in pairs(GLOBAL.require("cooking").recipes) do
     if recipe_table.bunnystew then
@@ -455,42 +481,129 @@ for _, recipe_table in pairs(GLOBAL.require("cooking").recipes) do
     end
 end
 
--- Ceviche
--- 25, 5, 20 -> buff -> reason: unused
-ChangeStats("ceviche", 37.5, 5, 40)
+-- [Butter Muffin](https://dontstarve.wiki.gg/wiki/Butter_Muffin/DST)
+-- 37.5, 5, 20 -> 37.5, 5, 10
+ChangeStats("butterflymuffin", 37.5, 5, 10)
 
--- Dragonpie
--- 75, 5, 40 -> nerf -> reason: OP
-ChangeStats("dragonpie", 25, 5, 40)
+-- [California Roll](https://dontstarve.wiki.gg/wiki/California_Roll/DST)
+-- 37.5, 10, 20
 
--- Fancy Spiralled Tubers
--- 37.5, 15, 3 -> nerf -> reason: potato nerf
+-- [Ceviche](https://dontstarve.wiki.gg/wiki/Ceviche/DST)
+-- Allow ice
+-- 25, 5, 20
+-- ChangeStats("ceviche", 25, 5, 20)
+
+-- [Creamy Potato Purée](https://dontstarve.wiki.gg/wiki/Creamy_Potato_Pur%C3%A9e)
+-- 37.5, 33, 20
+
+-- [Dragonpie](https://dontstarve.wiki.gg/wiki/Dragonpie/DST)
+-- 75, 5, 40 -> 37.5, 5, 20
+ChangeStats("dragonpie", 37.5, 5, 20)
+
+-- [Fancy Spiralled Tubers](https://dontstarve.wiki.gg/wiki/Fancy_Spiralled_Tubers)
+-- 37.5, 15, 5 -> 18.75, 15, 3
 ChangeStats("potatotornado", 18.75, 15, 3)
 
--- Fish Tacos
--- 37.5, 5, 20 -> buff -> reason: unused
-ChangeStats("fishtacos", 37.5, 15, 40)
+-- [Fig-Stuffed Trunk](https://dontstarve.wiki.gg/wiki/Fig-Stuffed_Trunk)
+-- 1 Fig, 1 Trunk, 0.5 Fruit, 0.5 Veggie
+-- 150, 15, 60 -> 75, 15, 60
+ChangeStats("koalefig_trunk", 75, 15, 60)
 
--- Fishsticks 
--- 37.5, 5, 40 -> nerf -> reason: allowing twigs
-ChangeStats("fishsticks", 37.5, 5, 20)
+-- [Figatoni](https://dontstarve.wiki.gg/wiki/Figatoni)
+-- 56.25, 15, 30
 
--- Fist Full of Jam
--- 37.5, 5, 3 -> nerf -> reason: allowing ice
-ChangeStats("jammypreserves", 18.75, 5, 3)
+-- [Figgy Frogwich](https://dontstarve.wiki.gg/wiki/Figgy_Frogwich)
+-- 25, 5, 20 -> 25, 33, 30
+ChangeStats("frognewton", 25, 33, 30)
 
--- Frozen Banana Daiquiri
--- 18.75, 15, 30 -> nerf
+-- [Figkabab](https://dontstarve.wiki.gg/wiki/Figkabab)
+-- Allow twigs
+-- 37.5, 10, 20 -> 37.5, 5, 20
+ChangeStats("figkabab", 37.5, 5, 20)
+
+-- [Fish Tacos](https://dontstarve.wiki.gg/wiki/Fish_Tacos/DST)
+-- 37.5, 5, 20 -> 37.5, 5, 3
+ChangeStats("fishtacos", 37.5, 15, 3)
+
+-- [Fishsticks](https://dontstarve.wiki.gg/wiki/Fishsticks)
+-- Allow twigs
+-- 37.5, 5, 40 -> 37.5, 5, 3
+ChangeStats("fishsticks", 37.5, 5, 3)
+
+-- [Fist Full of Jam](https://dontstarve.wiki.gg/wiki/Fist_Full_of_Jam/DST)
+-- Allow ice
+-- 37.5, 5, 3 -> 25, 5, 3
+ChangeStats("jammypreserves", 25, 5, 3)
+
+-- [Flower Salad](https://dontstarve.wiki.gg/wiki/Flower_Salad/DST)
+-- 12.5, 5, 40 -> 12.5, 5, 30
+ChangeStats("flowersalad", 12.5, 5, 30)
+
+-- [Froggle Bunwich](https://dontstarve.wiki.gg/wiki/Froggle_Bunwich/DST)
+-- 37.5, 5, 20 -> 37.5, 5, 10
+ChangeStats("frogglebunwich", 37.5, 5, 10)
+
+-- [Frozen Banana Daiquiri](https://dontstarve.wiki.gg/wiki/Frozen_Banana_Daiquiri)
+-- Allow ice
+-- 18.75, 15, 30 -> 12.5, 5, 20
 ChangeStats("frozenbananadaiquiri", 12.5, 33, 20)
 
--- Meaty Stew
--- 150, 5, 12 -> nerf -> reason: OP + allowing ice
-ChangeStats("bonestew", 92.5, 5, 12)
+-- [Fruit Medley](https://dontstarve.wiki.gg/wiki/Fruit_Medley/DST)
+-- 25, 5, 20 -> 37.5, 5, 10
+ChangeStats("fruitmedley", 37.5, 5, 10)
 
--- Monster Lasagna
--- 37.5, -20, -20 -> no changes
-ChangeStats("monsterlasagna", 37.5, -20, -20)
--- (priority = 10) and (monster >= 2) -> buff -> reason: fallback for any monster meat dishes
+-- [Guacamole](https://dontstarve.wiki.gg/wiki/Guacamole/DST)
+-- 1 Moleworm, 1 Ripe Stone Fruit, 1 Onion, 1 Toma Root
+-- 37.5, 0, 20 -> 37.5, 33, 30
+ChangeStats("guacamole", 37.5, 33, 30)
+
+-- [Honey Ham](https://dontstarve.wiki.gg/wiki/Honey_Ham/DST)
+-- 75, 5, 30 -> 75, 5, 20
+ChangeStats("honeyham", 75, 5, 20)
+
+-- [Honey Nuggets](https://dontstarve.wiki.gg/wiki/Honey_Nuggets/DST)
+-- 37.5, 5, 20 -> 37.5, 5, 10
+ChangeStats("honeynuggets", 37.5, 5, 10)
+
+-- [Ice Cream](https://dontstarve.wiki.gg/wiki/Ice_Cream/DST)
+-- 25, 50, 0
+
+-- [Jelly Salad](https://dontstarve.wiki.gg/wiki/Jelly_Salad)
+-- 37.5, 50, 0
+
+-- [Kabobs](https://dontstarve.wiki.gg/wiki/Kabobs/DST)
+-- 37.5, 5, 3
+
+-- [Leafy Meatloaf](https://dontstarve.wiki.gg/wiki/Leafy_Meatloaf)
+-- 37.5, 5, 8 -> 37.5, 5, 3
+ChangeStats("leafloaf", 37.5, 5, 3)
+
+-- [Lobster Bisque](https://dontstarve.wiki.gg/wiki/Lobster_Bisque)
+-- 1 Wobster, 1 Garlic, 2 Ice
+-- 25, 10, 60 -> 25, 5, 60
+ChangeStats("lobsterbisque", 25, 5, 60)
+
+-- [Lobster Dinner](https://dontstarve.wiki.gg/wiki/Lobster_Dinner)
+-- 1 Wobster, 1 Butter, 1 Sweetener, 1 Garlic
+-- 37.5, 50, 60
+
+-- [Meatballs](https://dontstarve.wiki.gg/wiki/Meatballs/DST)
+-- 62.5, 5, 3
+
+-- [Meaty Stew](https://dontstarve.wiki.gg/wiki/Meaty_Stew/DST)
+-- Allow ice
+-- 120, 5, 12 -> 92.5, 5, 3
+ChangeStats("bonestew", 92.5, 5, 3)
+
+-- [Melonsicle](https://dontstarve.wiki.gg/wiki/Melonsicle/DST)
+-- Allow ice and twigs
+-- 12.5, 20, 3 -> 12.5, 33, 3
+ChangeStats("watermelonicle", 12.5, 33, 3)
+
+-- [Monster Lasagna](https://dontstarve.wiki.gg/wiki/Monster_Lasagna/DST)
+-- 37.5, -20, -20
+-- (priority = 10) and (monster >= 2)
+-- reason: fallback for any monster meat dishes
 for _, recipe_table in pairs(GLOBAL.require("cooking").recipes) do
     if recipe_table.monsterlasagna then
         recipe_table.monsterlasagna.priority = 99
@@ -500,21 +613,99 @@ for _, recipe_table in pairs(GLOBAL.require("cooking").recipes) do
     end
 end
 
--- Pumpkin Cookie
--- 37.5, 15, 0 -> rebalance -> reason: unused
+-- [Mushy Cake](https://dontstarve.wiki.gg/wiki/Mushy_Cake)
+-- 25, 10, 0
+
+-- [Pierogi](https://dontstarve.wiki.gg/wiki/Pierogi/DST)
+-- 37.5, 5, 40 -> 37.5, 5, 20
+ChangeStats("perogies", 37.5, 5, 20)
+
+-- [Plain Omelette](https://dontstarve.wiki.gg/wiki/Plain_Omelette)
+-- 50, 5, 3
+
+-- [Powdercake](https://dontstarve.wiki.gg/wiki/Powdercake/DST)
+-- Allow twigs
+-- 0, 0, -3
+
+-- [Pumpkin Cookies](https://dontstarve.wiki.gg/wiki/Pumpkin_Cookies/DST)
+-- 37.5, 15, 0 -> 18.75, 20, 0
 ChangeStats("pumpkincookie", 18.75, 20, 0)
 
--- Salsa Fresca
--- 25, 33, 3 -> rebalance
-ChangeStats("salsa", 18.75, 15, 20)
+-- [Ratatouille](https://dontstarve.wiki.gg/wiki/Ratatouille/DST)
+-- 25, 5, 3
 
--- Trail Mix
--- 12.5, 5, 30 -> nerf -> reason: OP
-ChangeStats("trailmix", 12.5, 5, 20)
+-- [Salsa Fresca](https://dontstarve.wiki.gg/wiki/Salsa_Fresca)
+-- 25, 33, 3 -> 18.75, 15, 10
+ChangeStats("salsa", 18.75, 15, 10)
 
--- Vegetable Stinger
--- 25, 33, 3 -> nerf -> reason: allowing ice
-ChangeStats("vegstinger", 18.75, 33, 3)
+-- [Seafood Gumbo](https://dontstarve.wiki.gg/wiki/Seafood_Gumbo/DST)
+-- 37.5, 20, 40 -> 50, 15, 30
+ChangeStats("seafoodgumbo", 50, 15, 30)
+
+-- [Soothing Tea](https://dontstarve.wiki.gg/wiki/Soothing_Tea)
+-- Allow ice
+-- 0, 15, 3
+
+-- [Spicy Chili](https://dontstarve.wiki.gg/wiki/Spicy_Chili/DST)
+-- 1 Meat, 1 Pepper, 2 Veggie Value
+-- 37.5, 0, 20 -> 37.5, 5, 10
+ChangeStats("hotchili", 37.5, 5, 10)
+
+-- [Stuffed Eggplant](https://dontstarve.wiki.gg/wiki/Stuffed_Eggplant/DST)
+-- 37.5, 5, 3
+
+-- [Stuffed Fish Heads](https://dontstarve.wiki.gg/wiki/Stuffed_Fish_Heads)
+-- Allow twigs and ice
+-- 75, 0, 20 -> 75, -5, 1
+ChangeStats("barnaclestuffedfishhead", 75, -5, 1)
+
+-- [Stuffed Night Cap](https://dontstarve.wiki.gg/wiki/Stuffed_Night_Cap)
+-- 18.75, -15, -20
+
+-- [Stuffed Pepper Poppers](https://dontstarve.wiki.gg/wiki/Stuffed_Pepper_Poppers)
+-- 1 Meat, 2 Peppers
+-- 25, -5, 30 -> 25, -5, 20
+ChangeStats("pepperpopper", 25, -5, 20)
+
+-- [Surf 'n' Turf](https://dontstarve.wiki.gg/wiki/Surf_%27n%27_Turf/DST)
+-- 37.5, 33, 60 -> 37.5, 33, 30
+ChangeStats("surfnturf", 37.5, 33, 30)
+
+-- [Taffy](https://dontstarve.wiki.gg/wiki/Taffy/DST)
+-- 25, 15, -3
+
+-- [Tall Scotch Eggs](https://dontstarve.wiki.gg/wiki/Tall_Scotch_Eggs)
+-- 1 Tallbird Egg, 1 Pepper, 2 Veggie Value
+-- 150, 5, 60 -> 112.5, 5, 40
+ChangeStats("talleggs", 92.5, 5, 40)
+
+-- [Trail Mix](https://dontstarve.wiki.gg/wiki/Trail_Mix/DST)
+-- Allow twigs
+-- 12.5, 5, 30 -> 12.5, 5, 10
+ChangeStats("trailmix", 12.5, 5, 10)
+
+-- [Turkey Dinner](https://dontstarve.wiki.gg/wiki/Turkey_Dinner/DST)
+-- 2 Raw Drumsticks, 2 Berries
+-- 75, 5, 20 -> 75, 5, 10
+ChangeStats("turkeydinner", 75, 5, 10)
+
+-- [Unagi](https://dontstarve.wiki.gg/wiki/Unagi/DST)
+-- 18.75, 5, 20
+
+-- [Vegetable Stinger](https://dontstarve.wiki.gg/wiki/Vegetable_Stinger)
+-- Allow ice
+-- 25, 33, 3 -> 12.5, 33, 3
+ChangeStats("vegstinger", 12.5, 33, 3)
+
+-- [Veggie Burger](https://dontstarve.wiki.gg/wiki/Veggie_Burger)
+-- 1 Leafy Meat, 1 Onion, 2 Veggie Value
+-- 37.5, 33, 30 -> 37.5, 33, 40
+ChangeStats("leafymeatburger", 37.5, 33, 40)
+
+-- [Waffles](https://dontstarve.wiki.gg/wiki/Waffles/DST)
+-- 1 Butter, 1 Egg, 1 Berry, 1 Sweetener
+-- 37.5, 5, 60 -> 37.5, 5, 60
+ChangeStats("waffles", 37.5, 5, 60)
 
 -- -- 
 -- -- , ,  
