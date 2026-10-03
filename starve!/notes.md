@@ -7,22 +7,38 @@ Here I will outline ideas and notes for this mod to implement in the future.
 - Speed up global hunger drain by 20%.
 - Remove ALL favorite food multipliers.
 
+## Bees & Honey
+
+- Bee Boxes are moved to `TECH.LOST` (crafting them requires blueprints dropped by the Bee Queen at a 100% chance).
+
+This way we make honey an incredibly rare resource, farming of which requires defeating the Bee Queen. Because of this fact we boost all dishes made with it in health and sanity.
+
+## Mobs Loot
+
+- Bees and Killer Bees: 1 Stinger (10% chance).
+- Splumonkeys: 1 Morsel + anything stolen.
+- Shadow Splumonkeys: 1 Beard Hair + 1 Nightmare Fuel (50% chance) + anything stolen.
+- Werepigs: 1 Meat + 1 Pig Skin.
+
+## Structures Loot
+
+- Beehives: 1 Honeycomb + 1 Honey.
+
+## Seeds & Farming
+
+- Regular farm plants and giant plants have their crop seeds stripped from their loot drops.
+- ALL farm plants freeze their growth in the winter.
+
+We now can multiply crops only by giant plants dropping multiple crops, and feeding them to a bird.
+
 ## Scarcity
 
-- Regrowth times for normal berry bushes, juicy berry bushes, and banana trees is multiplied by 2.
-- Regular farm plants and giant plants have their crop seeds stripped from their loot drops. We now can multiply crops only by giant plants dropping multiple crops, and feeding them to a bird.
-- Birds refuse to accept any food item with health value < 0.
-- Bees and Killer Bees drop 0 Honey and their stinger drop chance is reduced to 10%.
-- Bee Boxes are moved to `TECH.LOST` (crafting them requires blueprints dropped by the Bee Queen at a 100% chance).
+- Regrowth times for normal berry bushes, juicy berry bushes, and banana trees are multiplied by 2.
 - Ponds/shoals have their maximum fish pool capped at 3, starting fish at 3, and respawn timers multiplied by 6x.
-- All Spiders can drop only a single Monster Meat with 16.6% chance and nothing else.
-- All Werepigs drop only 1 Meat and 1 Pig Skin
 
 ## Design Constraints
 
-The philosophy behind food rebalance lies in:
-
-### Nerfing **ingredients** to make them essentially useless consumed in their raw/cooked form.
+The philosophy behind food rebalance lies in nerfing **ingredients** to make them essentially useless consumed in their raw/cooked form.
 
 No raw/cooked ingredients that have a [food value](https://dontstarve.wiki.gg/wiki/Food_Value/DST) (with exceptions and reasons listed below) can have any Sanity > 0 OR Health > 3.
 

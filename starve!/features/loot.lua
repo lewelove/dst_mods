@@ -130,6 +130,28 @@ AddPrefabPostInit("koalefant_winter", function(inst)
     end
 end)
 
+-- [Splumonkey](https://dontstarve.wiki.gg/wiki/Splumonkey/DST)
+AddPrefabPostInit("monkey", function(inst)
+    if not GLOBAL.TheWorld.ismastersim then return end
+    local ld = inst.components.lootdropper
+    if not ld then return end
+
+    local old_SetLoot = ld.SetLoot
+
+    local function ApplyLoot()
+        local is_shadow = inst:HasTag("nightmare")
+        old_SetLoot(ld, is_shadow and { "beardhair" } or { "smallmeat" })
+        if is_shadow then
+            ld:AddChanceLoot("nightmarefuel", 0.5)
+        end
+    end
+
+    ld.SetLoot = function() ApplyLoot() end
+    ld.SetChanceLootTable = function() end
+
+    ApplyLoot()
+end)
+
 ---- Deciduous Tree Loot Changes ----
 
 AddPrefabPostInit("deciduoustree", function(inst)
@@ -190,3 +212,4 @@ AddPrefabPostInit("deciduoustree", function(inst)
         return ret
     end
 end)
+

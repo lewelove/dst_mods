@@ -29,9 +29,9 @@ AllowTwigs("bananapop")
 -- Priority 1 -> 30
 ChangeStats("bananajuice", 25, 33, 40)
 AllowIce("bananajuice")
+ChangePriority("bananajuice", 30)
 ChangeRecipe({
     dish = "bananajuice",
-    priority = 30,
     recipe = function(cooker, names, tags)
         return ((names.cave_banana or 0) + (names.cave_banana_cooked or 0) >= 2)
             and (tags.sweetener and tags.sweetener >= 1)
@@ -70,9 +70,9 @@ ChangeStats("veggieomlet", 37.5, 5, 10)
 -- Fallback for meat+ice dishes
 ChangeStats("bunnystew", 12.5, 5, 10)
 AllowIce("bunnystew")
+ChangePriority("bunnystew", 0)
 ChangeRecipe({
     dish = "bunnystew",
-    priority = 0,
     recipe = function(cooker, names, tags)
         return (tags.meat and tags.meat > 0)
             and (tags.frozen and tags.frozen > 0)
@@ -171,9 +171,9 @@ ChangeStats("fruitmedley", 37.5, 5, 10)
 -- 37.5, 0, 20 -> 37.5, 33, 30
 -- Priority 10 -> 30
 ChangeStats("guacamole", 37.5, 33, 30)
+ChangePriority("guacamole", 30)
 ChangeRecipe({
     dish = "guacamole",
-    priority = 30,
     recipe = function(cooker, names, tags)
         return (names.mole and names.mole >= 1)
             and ((names.rock_avocado_fruit_ripe or 0) + (names.rock_avocado_fruit_ripe_cooked or 0) >= 1)
@@ -251,10 +251,7 @@ AllowIce("mandrakesoup")
 -- 120, 5, 12 -> 92.5, 5, 3
 ChangeStats("bonestew", 92.5, 5, 3)
 AllowIce("bonestew")
-ChangeRecipe({
-    dish = "bonestew",
-    priority = 1,
-})
+ChangePriority("bonestew", 1)
 
 -- [Melonsicle](https://dontstarve.wiki.gg/wiki/Melonsicle/DST)
 -- Allow ice and twigs
@@ -273,9 +270,9 @@ AllowTwigs("batnosehat")
 -- reason: fallback for any monster meat dishes
 AllowIce("monsterlasagna")
 AllowTwigs("monsterlasagna")
+ChangePriority("monsterlasagna", 99)
 ChangeRecipe({
     dish = "monsterlasagna",
-    priority = 99,
     recipe = function(cooker, names, tags)
         return (tags.monster or 0) >= 1
     end,
@@ -348,7 +345,7 @@ AllowTwigs("barnaclestuffedfishhead")
 -- 18.75, -15, -20
 -- Priority 30 -> 100
 AllowTwigs("shroombait")
-ChangeRecipe({ dish = "shroombait", priority = 100 })
+ChangePriority("shroombait", 100)
 
 -- [Stuffed Pepper Poppers](https://dontstarve.wiki.gg/wiki/Stuffed_Pepper_Poppers)
 -- 1 Meat, 2 Peppers
@@ -375,9 +372,9 @@ ChangeStats("surfnturf", 37.5, 33, 30)
 -- 150, 5, 60 -> 92.5, 5, 40
 -- Priority 10 -> 30
 ChangeStats("talleggs", 92.5, 5, 40)
+ChangePriority("talleggs", 30)
 ChangeRecipe({
     dish = "talleggs",
-    priority = 30,
     recipe = function(cooker, names, tags)
         return (names.tallbirdegg or names.tallbirdegg_cooked)
             and ((names.pepper or 0) + (names.pepper_cooked or 0) >= 1)
@@ -476,6 +473,7 @@ local function ApplyCrockPotRestrictions()
     end
 end
 
-ChangeRecipe({ dish = "monstertartare", priority = 100 })
+ChangePriority("monstertartare", 100)
 
 ApplyCrockPotRestrictions()
+

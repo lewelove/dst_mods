@@ -96,7 +96,6 @@ for _, weed_name in ipairs(weeds) do
     AddPrefabPostInit(weed_name, FundamentalWinterFreeze)
 end
 
-
 ---- Cactuses Freeze in Winter ----
 
 local function DisableWildGrowth(inst)
