@@ -7,18 +7,22 @@ Here I will outline ideas and notes for this mod to implement in the future.
 - Speed up global hunger drain by 20%.
 - Remove ALL favorite food multipliers.
 
-## Bees & Honey
-
-- Bee Boxes are moved to `TECH.LOST` (crafting them requires blueprints dropped by the Bee Queen at a 100% chance).
-
-This way we make honey an incredibly rare resource, farming of which requires defeating the Bee Queen. Because of this fact we boost all dishes made with it in health and sanity.
-
 ## Mobs Loot
 
-- Bees and Killer Bees: 1 Stinger (10% chance).
+- Bees and Killer Bees: 1 Stinger (10%).
 - Splumonkeys: 1 Morsel + anything stolen.
-- Shadow Splumonkeys: 1 Beard Hair + 1 Nightmare Fuel (50% chance) + anything stolen.
+- Shadow Splumonkeys: 1 Beard Hair + 1 Nightmare Fuel (50%) + anything stolen.
+- Koalefant: 4 Meat + 1 Trunk
 - Werepigs: 1 Meat + 1 Pig Skin.
+
+- Spider: 1 Monster Meat (25%)
+- Spider Warrior: 1 Monster Meat (25%) + 1 Spider Gland (25%)
+- Cave Spider: 1 Monster Meat (50%) + 1 Spider Gland (25%)
+- Spitter: 1 Monster Meat (50%) + 1 Spider Gland (25%)
+- Dangling Depth Dweller: 1 Silk
+- Shattered Spider: 1 Spider Gland (25%)
+- Nurse Spider: 1 Spider Gland + 1 Monster Meat (25%)
+- Sea Strider: 1 Twigs (25%)
 
 ## Structures Loot
 
@@ -29,7 +33,7 @@ This way we make honey an incredibly rare resource, farming of which requires de
 - Regular farm plants and giant plants have their crop seeds stripped from their loot drops.
 - ALL farm plants freeze their growth in the winter.
 
-We now can multiply crops only by giant plants dropping multiple crops, and feeding them to a bird.
+We now can multiply crops only by growing giant plants -> destroying them for multiple crops -> feeding them to a bird to produce seeds.
 
 ## Scarcity
 

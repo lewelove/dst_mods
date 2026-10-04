@@ -15,6 +15,8 @@ local function SetMobLoot(inst, loot, chanceloot)
     end
 end
 
+-- https://dontstarve.wiki.gg/wiki/Mobs/DST
+
 -- [Bee](https://dontstarve.wiki.gg/wiki/Bee)
 AddPrefabPostInit("bee", function(inst)
     SetMobLoot(inst, nil, {
@@ -68,7 +70,7 @@ end)
 -- [Shattered Spider](https://dontstarve.wiki.gg/wiki/Shattered_Spider)
 AddPrefabPostInit("spider_moon", function(inst)
     SetMobLoot(inst, nil, {
-        { "moonglass", 0.25 },
+        { "spidergland", 0.25 },
     })
 end)
 
@@ -81,8 +83,8 @@ end)
 
 -- [Sea Strider](https://dontstarve.wiki.gg/wiki/Sea_Strider)
 AddPrefabPostInit("spider_water", function(inst)
-    SetMobLoot(inst, { "twigs" }, {
-        { "monstermeat", 0.25 },
+    SetMobLoot(inst, nil, {
+        { "twigs", 0.25 },
     })
 end)
 
