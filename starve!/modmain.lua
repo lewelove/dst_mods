@@ -13,3 +13,5 @@ modimport("features/ingredients.lua")
 modimport("features/dishes.lua")
 modimport("features/loot.lua")
 modimport("features/winter_freeze.lua")
+modimport("features/farm_plants.lua")
+
