@@ -1,0 +1,9 @@
+{
+  "hunger": "images/Hunger_Icon.png",
+  "sanity": "images/Sanity_Icon.png",
+  "health": "images/Health_Icon.png",
+  "rot": "images/Rot.png",
+  "crockpot": "images/Crock_Pot.png",
+  "priority": "images/Priority.png",
+  "background": "images/Site-background.jpg"
+}

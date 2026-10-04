@@ -1,0 +1,887 @@
+{
+  "asparagussoup": {
+    "name": "Asparagus Soup",
+    "vanilla": {
+      "hunger": 18.75,
+      "sanity": 5,
+      "health": 20,
+      "rot_time": 7200,
+      "cook_time": 0.5,
+      "priority": 10
+    },
+    "modded": {
+      "health": 10
+    }
+  },
+  "baconeggs": {
+    "name": "Bacon and Eggs",
+    "vanilla": {
+      "hunger": 75,
+      "sanity": 5,
+      "health": 20,
+      "rot_time": 9600,
+      "cook_time": 2,
+      "priority": 10
+    },
+    "modded": {
+      "health": 10
+    }
+  },
+  "bananajuice": {
+    "name": "Banana Shake",
+    "vanilla": {
+      "hunger": 25,
+      "sanity": 33,
+      "health": 8,
+      "rot_time": 7200,
+      "cook_time": 0.5,
+      "priority": 1
+    },
+    "modded": {
+      "health": 40,
+      "priority": 30
+    }
+  },
+  "bananapop": {
+    "name": "Banana Pop",
+    "vanilla": {
+      "hunger": 12.5,
+      "sanity": 33,
+      "health": 20,
+      "rot_time": 1440,
+      "cook_time": 0.5,
+      "priority": 20
+    },
+    "modded": {
+      "health": 3
+    }
+  },
+  "barnaclepita": {
+    "name": "Barnacle Pita",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 5,
+      "health": 20,
+      "rot_time": 7200,
+      "cook_time": 2,
+      "priority": 25
+    },
+    "modded": {
+      "health": 3
+    }
+  },
+  "barnaclestuffedfishhead": {
+    "name": "Stuffed Fish Heads",
+    "vanilla": {
+      "hunger": 75,
+      "sanity": 0,
+      "health": 20,
+      "rot_time": 1440,
+      "cook_time": 2,
+      "priority": 26
+    },
+    "modded": {
+      "sanity": -5,
+      "health": 1
+    }
+  },
+  "barnaclesushi": {
+    "name": "Barnacle Nigiri",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 15,
+      "health": 40,
+      "rot_time": 4800,
+      "cook_time": 0.5,
+      "priority": 30
+    },
+    "modded": {
+      "health": 20
+    }
+  },
+  "barnaclinguine": {
+    "name": "Barnacle Linguine",
+    "vanilla": {
+      "hunger": 75,
+      "sanity": 20,
+      "health": 30,
+      "rot_time": 2880,
+      "cook_time": 2,
+      "priority": 30
+    },
+    "modded": {
+      "hunger": 50,
+      "sanity": 5,
+      "health": 20
+    }
+  },
+  "bonestew": {
+    "name": "Meaty Stew",
+    "vanilla": {
+      "hunger": 150,
+      "sanity": 5,
+      "health": 12,
+      "rot_time": 4800,
+      "cook_time": 0.75,
+      "priority": 0
+    },
+    "modded": {
+      "hunger": 92.5,
+      "health": 3,
+      "priority": 1
+    }
+  },
+  "bunnystew": {
+    "name": "Bunny Stew",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 5,
+      "health": 20,
+      "rot_time": 4800,
+      "cook_time": 0.5,
+      "priority": 1
+    },
+    "modded": {
+      "hunger": 12.5,
+      "health": 10,
+      "priority": 0
+    }
+  },
+  "butterflymuffin": {
+    "name": "Butter Muffin",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 5,
+      "health": 20,
+      "rot_time": 7200,
+      "cook_time": 2,
+      "priority": 1
+    },
+    "modded": {
+      "health": 10
+    }
+  },
+  "californiaroll": {
+    "name": "California Roll",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 10,
+      "health": 20,
+      "rot_time": 4800,
+      "cook_time": 0.5,
+      "priority": 20
+    }
+  },
+  "ceviche": {
+    "name": "Ceviche",
+    "vanilla": {
+      "hunger": 25,
+      "sanity": 5,
+      "health": 20,
+      "rot_time": 4800,
+      "cook_time": 0.5,
+      "priority": 20
+    }
+  },
+  "dragonpie": {
+    "name": "Dragonpie",
+    "vanilla": {
+      "hunger": 75,
+      "sanity": 5,
+      "health": 40,
+      "rot_time": 7200,
+      "cook_time": 2,
+      "priority": 1
+    },
+    "modded": {
+      "hunger": 37.5,
+      "health": 20
+    }
+  },
+  "figatoni": {
+    "name": "Figatoni",
+    "vanilla": {
+      "hunger": 56.25,
+      "sanity": 15,
+      "health": 30,
+      "rot_time": 2880,
+      "cook_time": 2,
+      "priority": 30
+    }
+  },
+  "figkabab": {
+    "name": "Figkabab",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 10,
+      "health": 20,
+      "rot_time": 7200,
+      "cook_time": 1,
+      "priority": 30
+    },
+    "modded": {
+      "sanity": 5
+    }
+  },
+  "fishsticks": {
+    "name": "Fishsticks",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 5,
+      "health": 40,
+      "rot_time": 4800,
+      "cook_time": 2,
+      "priority": 10
+    },
+    "modded": {
+      "health": 3
+    }
+  },
+  "fishtacos": {
+    "name": "Fish Tacos",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 5,
+      "health": 20,
+      "rot_time": 2880,
+      "cook_time": 0.5,
+      "priority": 10
+    },
+    "modded": {
+      "sanity": 15,
+      "health": 3
+    }
+  },
+  "flowersalad": {
+    "name": "Flower Salad",
+    "vanilla": {
+      "hunger": 12.5,
+      "sanity": 5,
+      "health": 40,
+      "rot_time": 2880,
+      "cook_time": 0.5,
+      "priority": 10
+    },
+    "modded": {
+      "health": 30
+    }
+  },
+  "frogglebunwich": {
+    "name": "Froggle Bunwich",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 5,
+      "health": 20,
+      "rot_time": 7200,
+      "cook_time": 2,
+      "priority": 1
+    },
+    "modded": {
+      "health": 10
+    }
+  },
+  "frognewton": {
+    "name": "Figgy Frogwich",
+    "vanilla": {
+      "hunger": 25,
+      "sanity": 5,
+      "health": 20,
+      "rot_time": 7200,
+      "cook_time": 1,
+      "priority": 1
+    },
+    "modded": {
+      "sanity": 33,
+      "health": 30
+    }
+  },
+  "frozenbananadaiquiri": {
+    "name": "Frozen Banana Daiquiri",
+    "vanilla": {
+      "hunger": 18.75,
+      "sanity": 15,
+      "health": 30,
+      "rot_time": 7200,
+      "cook_time": 1,
+      "priority": 2
+    },
+    "modded": {
+      "hunger": 12.5,
+      "sanity": 5,
+      "health": 20
+    }
+  },
+  "fruitmedley": {
+    "name": "Fruit Medley",
+    "vanilla": {
+      "hunger": 25,
+      "sanity": 5,
+      "health": 20,
+      "rot_time": 2880,
+      "cook_time": 0.5,
+      "priority": 0
+    },
+    "modded": {
+      "hunger": 37.5,
+      "health": 10
+    }
+  },
+  "guacamole": {
+    "name": "Guacamole",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 0,
+      "health": 20,
+      "rot_time": 4800,
+      "cook_time": 0.5,
+      "priority": 10
+    },
+    "modded": {
+      "sanity": 33,
+      "health": 30,
+      "priority": 30
+    }
+  },
+  "honeyham": {
+    "name": "Honey Ham",
+    "vanilla": {
+      "hunger": 75,
+      "sanity": 5,
+      "health": 30,
+      "rot_time": 7200,
+      "cook_time": 2,
+      "priority": 2
+    },
+    "modded": {
+      "health": 20
+    }
+  },
+  "honeynuggets": {
+    "name": "Honey Nuggets",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 5,
+      "health": 20,
+      "rot_time": 7200,
+      "cook_time": 2,
+      "priority": 2
+    },
+    "modded": {
+      "health": 10
+    }
+  },
+  "hotchili": {
+    "name": "Spicy Chili",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 0,
+      "health": 20,
+      "rot_time": 4800,
+      "cook_time": 0.5,
+      "priority": 10
+    },
+    "modded": {
+      "sanity": 5,
+      "health": 10
+    }
+  },
+  "icecream": {
+    "name": "Ice Cream",
+    "vanilla": {
+      "hunger": 25,
+      "sanity": 50,
+      "health": 0,
+      "rot_time": 1440,
+      "cook_time": 0.5,
+      "priority": 10
+    }
+  },
+  "jammypreserves": {
+    "name": "Fist Full of Jam",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 5,
+      "health": 3,
+      "rot_time": 7200,
+      "cook_time": 0.5,
+      "priority": 0
+    },
+    "modded": {
+      "hunger": 25
+    }
+  },
+  "jellybean": {
+    "name": "Jellybeans",
+    "vanilla": {
+      "hunger": 0,
+      "sanity": 5,
+      "health": 2,
+      "rot_time": 0,
+      "cook_time": 2.5,
+      "priority": 12
+    }
+  },
+  "justeggs": {
+    "name": "Plain Omelette",
+    "vanilla": {
+      "hunger": 50,
+      "sanity": 5,
+      "health": 3,
+      "rot_time": 4800,
+      "cook_time": 0.5,
+      "priority": 0
+    }
+  },
+  "kabobs": {
+    "name": "Kabobs",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 5,
+      "health": 3,
+      "rot_time": 7200,
+      "cook_time": 2,
+      "priority": 5
+    }
+  },
+  "koalefig_trunk": {
+    "name": "Fig-Stuffed Trunk",
+    "vanilla": {
+      "hunger": 150,
+      "sanity": 15,
+      "health": 60,
+      "rot_time": 7200,
+      "cook_time": 2,
+      "priority": 40
+    },
+    "modded": {
+      "hunger": 75
+    }
+  },
+  "leafloaf": {
+    "name": "Leafy Meatloaf",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 5,
+      "health": 8,
+      "rot_time": 9600,
+      "cook_time": 2,
+      "priority": 25
+    },
+    "modded": {
+      "health": 3
+    }
+  },
+  "leafymeatburger": {
+    "name": "Veggie Burger",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 33,
+      "health": 30,
+      "rot_time": 2880,
+      "cook_time": 2,
+      "priority": 26
+    },
+    "modded": {
+      "health": 40
+    }
+  },
+  "leafymeatsouffle": {
+    "name": "Jelly Salad",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 50,
+      "health": 0,
+      "rot_time": 2880,
+      "cook_time": 2,
+      "priority": 50
+    }
+  },
+  "lobsterbisque": {
+    "name": "Lobster Bisque",
+    "vanilla": {
+      "hunger": 25,
+      "sanity": 10,
+      "health": 60,
+      "rot_time": 4800,
+      "cook_time": 0.5,
+      "priority": 30
+    },
+    "modded": {
+      "sanity": 5
+    }
+  },
+  "lobsterdinner": {
+    "name": "Lobster Dinner",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 50,
+      "health": 60,
+      "rot_time": 7200,
+      "cook_time": 1,
+      "priority": 25
+    }
+  },
+  "mandrakesoup": {
+    "name": "Mandrake Soup",
+    "vanilla": {
+      "hunger": 150,
+      "sanity": 5,
+      "health": 100,
+      "rot_time": 2880,
+      "cook_time": 3,
+      "priority": 10
+    }
+  },
+  "mashedpotatoes": {
+    "name": "Creamy Potato Purée",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 33,
+      "health": 20,
+      "rot_time": 7200,
+      "cook_time": 1,
+      "priority": 20
+    }
+  },
+  "meatballs": {
+    "name": "Meatballs",
+    "vanilla": {
+      "hunger": 62.5,
+      "sanity": 5,
+      "health": 3,
+      "rot_time": 4800,
+      "cook_time": 0.75,
+      "priority": -1
+    }
+  },
+  "meatysalad": {
+    "name": "Beefy Greens",
+    "vanilla": {
+      "hunger": 75,
+      "sanity": 5,
+      "health": 40,
+      "rot_time": 2880,
+      "cook_time": 2,
+      "priority": 25
+    },
+    "modded": {
+      "hunger": 37.5
+    }
+  },
+  "monsterlasagna": {
+    "name": "Monster Lasagna",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": -20,
+      "health": -20,
+      "rot_time": 2880,
+      "cook_time": 0.5,
+      "priority": 10
+    },
+    "modded": {
+      "priority": 99
+    }
+  },
+  "pepperpopper": {
+    "name": "Stuffed Pepper Poppers",
+    "vanilla": {
+      "hunger": 25,
+      "sanity": -5,
+      "health": 30,
+      "rot_time": 7200,
+      "cook_time": 2,
+      "priority": 20
+    },
+    "modded": {
+      "health": 20
+    }
+  },
+  "perogies": {
+    "name": "Pierogi",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 5,
+      "health": 40,
+      "rot_time": 9600,
+      "cook_time": 1,
+      "priority": 5
+    },
+    "modded": {
+      "health": 20
+    }
+  },
+  "potatotornado": {
+    "name": "Fancy Spiralled Tubers",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 15,
+      "health": 3,
+      "rot_time": 4800,
+      "cook_time": 0.75,
+      "priority": 10
+    },
+    "modded": {
+      "hunger": 18.75
+    }
+  },
+  "powcake": {
+    "name": "Powdercake",
+    "vanilla": {
+      "hunger": 0,
+      "sanity": 0,
+      "health": -3,
+      "rot_time": 9000000,
+      "cook_time": 0.5,
+      "priority": 10
+    }
+  },
+  "pumpkincookie": {
+    "name": "Pumpkin Cookies",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 15,
+      "health": 0,
+      "rot_time": 4800,
+      "cook_time": 2,
+      "priority": 10
+    },
+    "modded": {
+      "hunger": 18.75,
+      "sanity": 20
+    }
+  },
+  "ratatouille": {
+    "name": "Ratatouille",
+    "vanilla": {
+      "hunger": 25,
+      "sanity": 5,
+      "health": 3,
+      "rot_time": 7200,
+      "cook_time": 1,
+      "priority": 0
+    }
+  },
+  "salsa": {
+    "name": "Salsa Fresca",
+    "vanilla": {
+      "hunger": 25,
+      "sanity": 33,
+      "health": 3,
+      "rot_time": 7200,
+      "cook_time": 0.5,
+      "priority": 20
+    },
+    "modded": {
+      "hunger": 18.75,
+      "sanity": 15,
+      "health": 10
+    }
+  },
+  "seafoodgumbo": {
+    "name": "Seafood Gumbo",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 20,
+      "health": 40,
+      "rot_time": 4800,
+      "cook_time": 1,
+      "priority": 10
+    },
+    "modded": {
+      "hunger": 50,
+      "sanity": 15,
+      "health": 30
+    }
+  },
+  "shroombait": {
+    "name": "Stuffed Night Cap",
+    "vanilla": {
+      "hunger": 18.75,
+      "sanity": -15,
+      "health": -20,
+      "rot_time": 7200,
+      "cook_time": 1,
+      "priority": 30
+    },
+    "modded": {
+      "priority": 100
+    }
+  },
+  "shroomcake": {
+    "name": "Mushy Cake",
+    "vanilla": {
+      "hunger": 25,
+      "sanity": 10,
+      "health": 0,
+      "rot_time": 7200,
+      "cook_time": 1,
+      "priority": 30
+    }
+  },
+  "stuffedeggplant": {
+    "name": "Stuffed Eggplant",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 5,
+      "health": 3,
+      "rot_time": 7200,
+      "cook_time": 2,
+      "priority": 1
+    }
+  },
+  "surfnturf": {
+    "name": "Surf 'n' Turf",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 33,
+      "health": 60,
+      "rot_time": 4800,
+      "cook_time": 1,
+      "priority": 30
+    },
+    "modded": {
+      "health": 30
+    }
+  },
+  "sweettea": {
+    "name": "Soothing Tea",
+    "vanilla": {
+      "hunger": 0,
+      "sanity": 15,
+      "health": 3,
+      "rot_time": 1440,
+      "cook_time": 1,
+      "priority": 1
+    }
+  },
+  "taffy": {
+    "name": "Taffy",
+    "vanilla": {
+      "hunger": 25,
+      "sanity": 15,
+      "health": -3,
+      "rot_time": 7200,
+      "cook_time": 2,
+      "priority": 10
+    }
+  },
+  "talleggs": {
+    "name": "Tall Scotch Eggs",
+    "vanilla": {
+      "hunger": 150,
+      "sanity": 5,
+      "health": 60,
+      "rot_time": 7200,
+      "cook_time": 2,
+      "priority": 10
+    },
+    "modded": {
+      "hunger": 92.5,
+      "health": 40,
+      "priority": 30
+    }
+  },
+  "trailmix": {
+    "name": "Trail Mix",
+    "vanilla": {
+      "hunger": 12.5,
+      "sanity": 5,
+      "health": 30,
+      "rot_time": 7200,
+      "cook_time": 0.5,
+      "priority": 10
+    },
+    "modded": {
+      "health": 10
+    }
+  },
+  "turkeydinner": {
+    "name": "Turkey Dinner",
+    "vanilla": {
+      "hunger": 75,
+      "sanity": 5,
+      "health": 20,
+      "rot_time": 2880,
+      "cook_time": 3,
+      "priority": 10
+    },
+    "modded": {
+      "health": 10
+    }
+  },
+  "unagi": {
+    "name": "Unagi",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 5,
+      "health": 20,
+      "rot_time": 4800,
+      "cook_time": 0.5,
+      "priority": 20
+    }
+  },
+  "veggieomlet": {
+    "name": "Breakfast Skillet",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 5,
+      "health": 20,
+      "rot_time": 9600,
+      "cook_time": 1,
+      "priority": 1
+    },
+    "modded": {
+      "health": 10
+    }
+  },
+  "vegstinger": {
+    "name": "Vegetable Stinger",
+    "vanilla": {
+      "hunger": 25,
+      "sanity": 33,
+      "health": 3,
+      "rot_time": 7200,
+      "cook_time": 0.5,
+      "priority": 15
+    },
+    "modded": {
+      "hunger": 12.5
+    }
+  },
+  "waffles": {
+    "name": "Waffles",
+    "vanilla": {
+      "hunger": 37.5,
+      "sanity": 5,
+      "health": 60,
+      "rot_time": 2880,
+      "cook_time": 0.5,
+      "priority": 10
+    }
+  },
+  "watermelonicle": {
+    "name": "Melonsicle",
+    "vanilla": {
+      "hunger": 12.5,
+      "sanity": 20,
+      "health": 3,
+      "rot_time": 1440,
+      "cook_time": 0.5,
+      "priority": 10
+    },
+    "modded": {
+      "sanity": 33
+    }
+  },
+  "wetgoop": {
+    "name": "Wet Goop",
+    "vanilla": {
+      "hunger": 0,
+      "sanity": 0,
+      "health": 0,
+      "rot_time": 2880,
+      "cook_time": 0.25,
+      "priority": -10
+    }
+  }
+}

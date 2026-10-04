@@ -1,0 +1,182 @@
+:root {
+  --page-bg: #EDE3CA;
+  --table-border: #bcae98;
+  --header-bg: #E4DAC2;
+  --hunger-bg: #F0DFB2;
+  --sanity-bg: #ECD2AC;
+  --health-bg: #E3C2AD;
+  --text-main: #000000;
+  --text-header: #EDE3CA;
+  --modded-color: #943800;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--page-bg);
+  background-image: url("/icons/extra/background.jpg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  padding: 24px 0;
+}
+
+.container {
+  width: 66.666%;
+  min-width: 680px;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-header);
+  letter-spacing: 0.02em;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--table-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background-color: var(--page-bg);
+  font-variant-numeric: tabular-nums;
+}
+
+th,
+td {
+  border: 1px solid var(--table-border);
+  padding: 8px 4px;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--text-main);
+}
+
+th {
+  background-color: var(--header-bg);
+  font-weight: 700;
+  font-size: 0.95rem;
+  height: 48px;
+}
+
+th.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+th.sortable:hover {
+  background-color: #d8cbb1;
+}
+
+.header-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.header-icon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.sort-indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  min-width: 12px;
+  max-width: 12px;
+  font-size: 0.75rem;
+  color: var(--text-main);
+}
+
+.sort-inactive {
+  opacity: 0.35;
+  font-size: 0.8rem;
+}
+
+.dish-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.col-icon {
+  width: 7%;
+}
+
+.col-dish {
+  width: 27%;
+  font-weight: 400;
+  color: var(--text-main);
+}
+
+.col-hunger {
+  width: 14%;
+}
+
+.col-sanity {
+  width: 14%;
+}
+
+.col-health {
+  width: 14%;
+}
+
+.col-rot {
+  width: 8%;
+}
+
+.col-cook {
+  width: 8%;
+}
+
+.col-priority {
+  width: 8%;
+}
+
+td.col-hunger {
+  background-color: var(--hunger-bg);
+}
+
+td.col-sanity {
+  background-color: var(--sanity-bg);
+}
+
+td.col-health {
+  background-color: var(--health-bg);
+}
+
+.stat-modded {
+  color: var(--modded-color);
+  font-weight: 700;
+}
+
+.status-message {
+  padding: 32px;
+  text-align: center;
+  background-color: var(--page-bg);
+  border: 1px solid var(--table-border);
+  color: var(--text-main);
+}

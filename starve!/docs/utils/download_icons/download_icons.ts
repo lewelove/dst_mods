@@ -2,10 +2,15 @@ import { existsSync, mkdirSync } from "node:fs"
 import { join, resolve } from "node:path"
 
 const DATA_DIR = import.meta.dir
-const DEFAULT_ICONS_DIR = resolve(DATA_DIR, "../../public/icons/dishes")
-const ICONS_DIR = process.env.ICONS_DIR ? resolve(process.env.ICONS_DIR) : DEFAULT_ICONS_DIR
+const PUBLIC_DIR = resolve(DATA_DIR, "../../public/icons")
+const DISHES_DIR = join(PUBLIC_DIR, "dishes")
+const EXTRA_DIR = join(PUBLIC_DIR, "extra")
 
-const DATA_FILES = ["dishes_icon_link_map.json", "warly_dishes_icon_link_map.json"]
+const TARGET_SETS: Array<{ file: string; targetDir: string }> = [
+  { file: "dishes_icons.json", targetDir: DISHES_DIR },
+  { file: "warly_dishes_icons.json", targetDir: DISHES_DIR },
+  { file: "extra_assets.json", targetDir: EXTRA_DIR },
+]
 
 const DEFAULT_WIKI_ORIGIN = "https://dontstarve.wiki.gg"
 const WIKI_ORIGIN = process.env.WIKI_ORIGIN ?? DEFAULT_WIKI_ORIGIN
@@ -17,12 +22,19 @@ const MAX_PARALLEL = 4
 
 type DishIcons = Record<string, string | null>
 
+interface DownloadJob {
+  name: string
+  link: string
+  targetDir: string
+}
+
 async function loadIcons(file: string): Promise<DishIcons> {
   return (await Bun.file(join(DATA_DIR, file)).json()) as DishIcons
 }
 
-async function download(prefab: string, link: string): Promise<void> {
-  const target = join(ICONS_DIR, `${prefab}.png`)
+async function download(name: string, link: string, targetDir: string): Promise<void> {
+  const ext = link.split('.').pop() || 'png'
+  const target = join(targetDir, `${name}.${ext}`)
   if (existsSync(target)) {
     return
   }
@@ -37,32 +49,32 @@ async function download(prefab: string, link: string): Promise<void> {
   await Bun.write(target, await response.arrayBuffer())
 }
 
-function collectJobs(iconSets: DishIcons[]): Array<[string, string]> {
-  const jobs: Array<[string, string]> = []
+function collectJobs(sets: Array<{ icons: DishIcons; targetDir: string }>): DownloadJob[] {
+  const jobs: DownloadJob[] = []
 
-  for (const icons of iconSets) {
-    for (const [prefab, link] of Object.entries(icons)) {
+  for (const { icons, targetDir } of sets) {
+    for (const [name, link] of Object.entries(icons)) {
       if (link === null) {
         continue
       }
-      jobs.push([prefab, link])
+      jobs.push({ name, link, targetDir })
     }
   }
 
   return jobs
 }
 
-async function runPool(jobs: Array<[string, string]>): Promise<string[]> {
+async function runPool(jobs: DownloadJob[]): Promise<string[]> {
   const failures: string[] = []
   let cursor = 0
 
   async function worker(): Promise<void> {
     while (cursor < jobs.length) {
-      const [prefab, link] = jobs[cursor++]
+      const { name, link, targetDir } = jobs[cursor++]
       try {
-        await download(prefab, link)
+        await download(name, link, targetDir)
       } catch (error) {
-        failures.push(`${prefab}: ${(error as Error).message}`)
+        failures.push(`${name}: ${(error as Error).message}`)
       }
     }
   }
@@ -74,13 +86,19 @@ async function runPool(jobs: Array<[string, string]>): Promise<string[]> {
 }
 
 async function main(): Promise<void> {
-  mkdirSync(ICONS_DIR, { recursive: true })
+  mkdirSync(DISHES_DIR, { recursive: true })
+  mkdirSync(EXTRA_DIR, { recursive: true })
 
-  const iconSets = await Promise.all(DATA_FILES.map(loadIcons))
-  const jobs = collectJobs(iconSets)
+  const loadedSets = await Promise.all(
+    TARGET_SETS.map(async ({ file, targetDir }) => ({
+      icons: await loadIcons(file),
+      targetDir,
+    }))
+  )
+  const jobs = collectJobs(loadedSets)
   const failures = await runPool(jobs)
 
-  console.log(`Icons: ${jobs.length - failures.length}/${jobs.length} -> ${ICONS_DIR}`)
+  console.log(`Icons: ${jobs.length - failures.length}/${jobs.length} downloaded`)
 
   for (const failure of failures) {
     console.error(failure)

@@ -1,5 +1,3 @@
--- Entry point: extract(game_dir, mod_dir) -> dishes_data.json
-
 local script_path = arg[0] or "main.lua"
 local here = script_path:match("^(.*)[/\\][^/\\]*$") or "."
 package.path = here .. "/?.lua;" .. package.path
@@ -9,12 +7,11 @@ local game = require("game")
 local mod = require("mod")
 local build = require("build")
 
-local repo = here .. "/../.."
-local GAME_DIR = repo .. "/scripts"
-local MOD_DIR = repo .. "/starve!"
-local UTILS_PATH = MOD_DIR .. "/scripts/utils.lua"
-local DISHES_PATH = MOD_DIR .. "/features/dishes.lua"
-local OUT_PATH = here .. "/../dishes_data.json"
+local ROOT = here .. "/../../.."
+local GAME_DIR = ROOT .. "/docs/databundles/scripts"
+local UTILS_PATH = ROOT .. "/scripts/utils.lua"
+local DISHES_PATH = ROOT .. "/features/dishes.lua"
+local OUT_PATH = ROOT .. "/docs/public/dishes_data.json"
 
 local function write_file(path, contents)
     local file, err = io.open(path, "wb")
