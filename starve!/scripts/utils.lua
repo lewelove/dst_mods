@@ -64,3 +64,8 @@ ChangeRecipe = function(dish_or_tbl, test_fn, priority)
     end
 end
 GLOBAL.ChangeRecipe = ChangeRecipe
+
+ChangePriority = function(dish, priority)
+    ChangeRecipe(dish, nil, priority)
+end
+GLOBAL.ChangePriority = ChangePriority

@@ -8,7 +8,7 @@ local mod = require("mod")
 local build = require("build")
 
 local ROOT = here .. "/../../.."
-local GAME_DIR = ROOT .. "/docs/databundles/scripts"
+local GAME_DIR = ROOT .. "/../databundles/scripts"
 local UTILS_PATH = ROOT .. "/scripts/utils.lua"
 local DISHES_PATH = ROOT .. "/features/dishes.lua"
 local OUT_PATH = ROOT .. "/docs/public/dishes_data.json"
